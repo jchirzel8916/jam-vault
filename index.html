@@ -1,1 +1,1279 @@
-<html><head><meta content="text/html; charset=UTF-8" http-equiv="content-type"><style type="text/css">ol{margin:0;padding:0}table td,table th{padding:0}.c0{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left;height:11pt}.c2{color:#000000;font-weight:400;text-decoration:none;vertical-align:baseline;font-size:11pt;font-family:"Arial";font-style:normal}.c1{padding-top:0pt;padding-bottom:0pt;line-height:1.15;orphans:2;widows:2;text-align:left}.c3{background-color:#ffffff;max-width:468pt;padding:72pt 72pt 72pt 72pt}.title{padding-top:0pt;color:#000000;font-size:26pt;padding-bottom:3pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}.subtitle{padding-top:0pt;color:#666666;font-size:15pt;padding-bottom:16pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}li{color:#000000;font-size:11pt;font-family:"Arial"}p{margin:0;color:#000000;font-size:11pt;font-family:"Arial"}h1{padding-top:20pt;color:#000000;font-size:20pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h2{padding-top:18pt;color:#000000;font-size:16pt;padding-bottom:6pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h3{padding-top:16pt;color:#434343;font-size:14pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h4{padding-top:14pt;color:#666666;font-size:12pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h5{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;orphans:2;widows:2;text-align:left}h6{padding-top:12pt;color:#666666;font-size:11pt;padding-bottom:4pt;font-family:"Arial";line-height:1.15;page-break-after:avoid;font-style:italic;orphans:2;widows:2;text-align:left}</style></head><body class="c3 doc-content"><p class="c1"><span class="c2">&lt;!DOCTYPE html&gt;</span></p><p class="c1"><span class="c2">&lt;html lang=&quot;en&quot;&gt;</span></p><p class="c1"><span class="c2">&lt;head&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;meta charset=&quot;UTF-8&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;title&gt;JAM Vault &mdash; Monster Truck &amp; Die-Cast Collector&lt;/title&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;link rel=&quot;icon&quot; type=&quot;image/jpeg&quot; href=&quot;https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&amp;fit=crop&amp;w=128&amp;q=80&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;link rel=&quot;apple-touch-icon&quot; href=&quot;https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&amp;fit=crop&amp;w=180&amp;q=80&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.googleapis.com&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;link rel=&quot;preconnect&quot; href=&quot;https://fonts.gstatic.com&quot; crossorigin&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;script src=&quot;https://accounts.google.com/gsi/client&quot; async defer&gt;&lt;/script&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &lt;style&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; :root {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; --bg-dark: #0a0c10;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; --card-bg: rgba(18, 22, 32, 0.85);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; --card-border: rgba(255, 255, 255, 0.08);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; --accent-yellow: #f59e0b;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; --accent-yellow-glow: rgba(245, 158, 11, 0.3);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; --accent-neon: #10b981;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; --accent-danger: #ef4444;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; --text-main: #f3f4f6;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; --text-muted: #9ca3af;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; --radius-lg: 16px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; --radius-md: 10px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; * {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; box-sizing: border-box;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin: 0;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 0;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; -webkit-tap-highlight-color: transparent;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; body {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background-color: var(--bg-dark);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background-image: </span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; radial-gradient(circle at top right, rgba(245, 158, 11, 0.08), transparent 400px),</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.05), transparent 400px);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: var(--text-main);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-family: &#39;Plus Jakarta Sans&#39;, sans-serif;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; min-height: 100vh;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding-bottom: 90px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; header {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; position: sticky;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; top: 0;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; z-index: 50;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; backdrop-filter: blur(16px);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: rgba(10, 12, 16, 0.85);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-bottom: 1px solid var(--card-border);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 12px 18px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .header-container {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; max-width: 1200px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin: 0 auto;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; justify-content: space-between;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .brand-wrap {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 12px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; cursor: pointer;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .brand-logo-img {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; height: 44px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; width: auto;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; filter: drop-shadow(0 2px 8px var(--accent-yellow-glow));</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .brand-title {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-family: &#39;Outfit&#39;, sans-serif;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 1.35rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 900;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; letter-spacing: 0.5px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: #fff;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 6px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .badge-pro {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.65rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: linear-gradient(135deg, #f59e0b, #d97706);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: #000;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 800;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 2px 6px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 4px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; letter-spacing: 0.5px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .header-actions {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 10px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .btn-add-primary {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: linear-gradient(135deg, #f59e0b, #fbbf24);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: #000;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: none;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 700;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.88rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 8px 16px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 20px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 6px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; cursor: pointer;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; box-shadow: 0 4px 14px var(--accent-yellow-glow);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; transition: transform 0.15s ease;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .btn-add-primary:active {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; transform: scale(0.96);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .user-pill {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: rgba(255, 255, 255, 0.06);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: 1px solid var(--card-border);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 6px 12px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 30px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 8px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.82rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: #e5e7eb;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; cursor: pointer;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .user-avatar {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; width: 26px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; height: 26px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 50%;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: #374151;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; justify-content: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 700;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.75rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; overflow: hidden;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .user-avatar img {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; width: 100%;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; height: 100%;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; object-fit: cover;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; main {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; max-width: 1200px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin: 18px auto;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 0 16px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; /* Filters Bar */</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .filter-panel {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: var(--card-bg);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: 1px solid var(--card-border);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: var(--radius-lg);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 14px 18px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin-bottom: 20px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; flex-wrap: wrap;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 12px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; backdrop-filter: blur(12px);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .search-input-wrap {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; flex: 1;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; min-width: 220px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; position: relative;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .search-input-wrap input {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; width: 100%;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: rgba(0, 0, 0, 0.4);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255, 255, 255, 0.1);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 10px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 10px 14px 10px 38px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: #fff;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.9rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; outline: none;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .search-input-wrap input:focus {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-color: var(--accent-yellow);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .search-icon {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; position: absolute;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; left: 12px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; top: 50%;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; transform: translateY(-50%);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: var(--text-muted);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 1rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .filter-selects {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; flex-wrap: wrap;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 8px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .filter-select {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: rgba(0, 0, 0, 0.4);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255, 255, 255, 0.1);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 8px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 9px 12px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: #d1d5db;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.82rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; outline: none;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; /* Grid */</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .truck-grid {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: grid;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 20px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .truck-card {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: var(--card-bg);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: 1px solid var(--card-border);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: var(--radius-lg);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; overflow: hidden;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; flex-direction: column;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; position: relative;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; transition: transform 0.2s, border-color 0.2s;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .truck-card:hover {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-color: rgba(245, 158, 11, 0.35);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; transform: translateY(-2px);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .truck-img-box {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; width: 100%;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; height: 190px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: #0f131a;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; position: relative;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; overflow: hidden;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; justify-content: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .truck-img-box img {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; width: 100%;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; height: 100%;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; object-fit: cover;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .scale-tag {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; position: absolute;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; top: 10px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; left: 10px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: rgba(0, 0, 0, 0.7);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; backdrop-filter: blur(8px);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 3px 8px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 6px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.7rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 700;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: var(--accent-yellow);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(245, 158, 11, 0.3);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .truck-body {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 16px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; flex: 1;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; flex-direction: column;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .truck-name-row {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; justify-content: space-between;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; align-items: baseline;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin-bottom: 4px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .truck-title {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-family: &#39;Outfit&#39;, sans-serif;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 1.2rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 700;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: #fff;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .truck-series {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.78rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: var(--accent-yellow);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 600;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin-bottom: 12px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .color-chips-row {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: grid;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; grid-template-columns: repeat(3, 1fr);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 6px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin-bottom: 14px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .color-chip {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: rgba(255, 255, 255, 0.04);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255, 255, 255, 0.06);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 6px 8px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 8px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; flex-direction: column;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 2px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .color-chip-label {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.65rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: var(--text-muted);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; text-transform: uppercase;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 700;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .color-chip-val {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.75rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 600;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: #fff;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 4px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; overflow: hidden;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; white-space: nowrap;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; text-overflow: ellipsis;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .dot-color {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; width: 8px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; height: 8px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 50%;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: inline-block;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; flex-shrink: 0;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .truck-card-actions {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; justify-content: space-between;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding-top: 10px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-top: 1px solid rgba(255, 255, 255, 0.06);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin-top: auto;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .btn-edit {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: rgba(255, 255, 255, 0.08);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: #fff;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: none;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 6px 14px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 6px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.8rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 600;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; cursor: pointer;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .btn-delete-trigger {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: transparent;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: #ef4444;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: none;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.8rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 600;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 4px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; cursor: pointer;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 6px 8px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; opacity: 0.8;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .btn-delete-trigger:hover {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; opacity: 1;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; /* Modal Framework */</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .modal-backdrop {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; position: fixed;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; inset: 0;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: rgba(0, 0, 0, 0.8);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; backdrop-filter: blur(8px);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; z-index: 100;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: none;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; justify-content: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 16px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .modal-backdrop.active {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .modal-box {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: #121620;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: 1px solid var(--card-border);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 20px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; width: 100%;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; max-width: 580px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; max-height: 90vh;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; overflow-y: auto;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 24px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .modal-header {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; justify-content: space-between;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin-bottom: 20px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-bottom: 1px solid rgba(255, 255, 255, 0.08);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding-bottom: 12px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .modal-header h3 {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-family: &#39;Outfit&#39;, sans-serif;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 1.3rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 700;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .btn-close-modal {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: none;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: none;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: var(--text-muted);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 1.4rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; cursor: pointer;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; /* Photo Upload &amp; Cam Section */</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .cam-box {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: #090b10;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: 2px dashed rgba(255, 255, 255, 0.15);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 12px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 16px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; text-align: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin-bottom: 18px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; position: relative;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .cam-btn-grid {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: grid;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; grid-template-columns: 1fr 1fr;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 10px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin-top: 10px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .btn-cam-action {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: rgba(255, 255, 255, 0.08);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255, 255, 255, 0.1);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 10px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 10px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: #fff;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.82rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 600;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; align-items: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; justify-content: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 6px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; cursor: pointer;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .preview-canvas-wrap {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin-top: 12px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; position: relative;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: none;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; text-align: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; #image-canvas {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; max-width: 100%;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; max-height: 220px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 8px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; cursor: crosshair;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .eyedropper-bar {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; flex-wrap: wrap;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 6px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; justify-content: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin-top: 10px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .btn-pick {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: #1f2937;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255, 255, 255, 0.2);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: #fff;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.72rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 700;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 4px 10px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 20px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; cursor: pointer;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .btn-pick.active {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-color: var(--accent-yellow);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: rgba(245, 158, 11, 0.2);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: var(--accent-yellow);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .form-group {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin-bottom: 14px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .form-label {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.8rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: var(--text-muted);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 600;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin-bottom: 6px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: block;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .form-control {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; width: 100%;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: #090b10;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: 1px solid rgba(255, 255, 255, 0.12);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 8px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 10px 12px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: #fff;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.88rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; outline: none;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .form-control:focus {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-color: var(--accent-yellow);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .form-row {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: grid;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; grid-template-columns: 1fr 1fr;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 12px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .form-actions {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: flex;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; justify-content: flex-end;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gap: 10px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin-top: 24px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-top: 1px solid rgba(255, 255, 255, 0.08);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding-top: 14px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .btn-save {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: var(--accent-yellow);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: #000;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 800;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: none;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 10px 22px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 10px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.9rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; cursor: pointer;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; /* Delete Confirmation Modal */</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .confirm-modal-box {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; max-width: 400px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; text-align: center;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .danger-icon {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 2.5rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; margin-bottom: 10px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; /* Toast */</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; #toast {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; position: fixed;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; bottom: 24px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; left: 50%;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; transform: translateX(-50%) translateY(100px);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: rgba(17, 24, 39, 0.95);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: 1px solid var(--accent-yellow);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; color: #fff;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 10px 20px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 30px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-size: 0.85rem;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; font-weight: 600;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; z-index: 200;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; transition: transform 0.3s ease, opacity 0.3s ease;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; opacity: 0;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; pointer-events: none;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; #toast.show {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; transform: translateX(-50%) translateY(0);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; opacity: 1;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; /* Google Auth Dropdown */</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .user-menu {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; position: absolute;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; top: 60px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; right: 18px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; background: #161b26;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border: 1px solid var(--card-border);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; border-radius: 12px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; padding: 14px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; width: 260px;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: none;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; z-index: 60;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; .user-menu.active {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; display: block;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c1"><span class="c2">&nbsp; &lt;/style&gt;</span></p><p class="c1"><span class="c2">&lt;/head&gt;</span></p><p class="c1"><span class="c2">&lt;body&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &lt;header&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;div class=&quot;header-container&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;brand-wrap&quot; onclick=&quot;location.reload()&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;img class=&quot;brand-logo-img&quot; src=&quot;https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&amp;fit=crop&amp;w=128&amp;q=80&quot; alt=&quot;JAM Vault Logo&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;brand-title&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; JAM VAULT &lt;span class=&quot;badge-pro&quot;&gt;PRO&lt;/span&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;header-actions&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;button class=&quot;btn-add-primary&quot; onclick=&quot;window.openAddModal()&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span&gt;+ Add Truck&lt;/span&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/button&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;user-pill&quot; onclick=&quot;toggleUserMenu()&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;user-avatar&quot; id=&quot;header-avatar&quot;&gt;G&lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span id=&quot;header-user-name&quot;&gt;Guest&lt;/span&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;/header&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &lt;!-- User / Google Drive Menu --&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;div class=&quot;user-menu&quot; id=&quot;user-menu&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;div style=&quot;font-weight: 700; margin-bottom: 4px;&quot; id=&quot;menu-user-title&quot;&gt;Google Cloud Sync&lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;div style=&quot;font-size: 0.75rem; color: var(--text-muted); margin-bottom: 12px;&quot; id=&quot;menu-user-email&quot;&gt;Sign in to back up to Google Drive&lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;button class=&quot;btn-cam-action&quot; style=&quot;width: 100%; margin-bottom: 8px;&quot; id=&quot;btn-google-auth&quot; onclick=&quot;handleGoogleSignIn()&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &#128273; Sign In with Google</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;/button&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;button class=&quot;btn-cam-action&quot; style=&quot;width: 100%; margin-bottom: 8px;&quot; onclick=&quot;syncToGoogleDrive()&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &#9729;&#65039; Backup to Google Drive</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;/button&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;button class=&quot;btn-cam-action&quot; style=&quot;width: 100%; margin-bottom: 8px;&quot; onclick=&quot;restoreFromGoogleDrive()&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &#128229; Restore from Google Drive</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;/button&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;button class=&quot;btn-cam-action&quot; style=&quot;width: 100%; color: #ef4444;&quot; onclick=&quot;signOutUser()&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; Sign Out</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;/button&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &lt;main&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;!-- Filter Panel --&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;section class=&quot;filter-panel&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;search-input-wrap&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;search-icon&quot;&gt;&#128269;&lt;/span&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; id=&quot;search-query&quot; placeholder=&quot;Search by name (Grave Digger, Sparkle Smash, etc)...&quot; oninput=&quot;applyFilters()&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;filter-selects&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;select class=&quot;filter-select&quot; id=&quot;filter-scale&quot; onchange=&quot;applyFilters()&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;&quot;&gt;All Scales&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;1:64&quot;&gt;1:64 Scale&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Mini / Micro&quot;&gt;Mini / Micro&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;1:24&quot;&gt;1:24 Scale&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/select&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;select class=&quot;filter-select&quot; id=&quot;filter-chassis&quot; onchange=&quot;applyFilters()&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;&quot;&gt;Chassis: All&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Green&quot;&gt;Green&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Purple&quot;&gt;Purple&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Black&quot;&gt;Black&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Silver / Chrome&quot;&gt;Silver / Chrome&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Yellow / Neon&quot;&gt;Yellow / Neon&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Blue&quot;&gt;Blue&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Red&quot;&gt;Red&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/select&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;select class=&quot;filter-select&quot; id=&quot;filter-rim&quot; onchange=&quot;applyFilters()&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;&quot;&gt;Rims: All&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Green&quot;&gt;Green&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Purple&quot;&gt;Purple&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Chrome&quot;&gt;Chrome&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Black&quot;&gt;Black&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Neon Yellow&quot;&gt;Neon Yellow&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Blue&quot;&gt;Blue&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Red&quot;&gt;Red&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/select&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;select class=&quot;filter-select&quot; id=&quot;filter-tire&quot; onchange=&quot;applyFilters()&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;&quot;&gt;Tires: All&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Black BKT&quot;&gt;Black BKT&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Mud Splattered&quot;&gt;Mud Splattered&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Blue Ice&quot;&gt;Blue Ice&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Green Glow&quot;&gt;Green Glow&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Solid Gray&quot;&gt;Solid Gray&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/select&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;/section&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;!-- Grid Container --&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;section class=&quot;truck-grid&quot; id=&quot;truck-container&quot;&gt;&lt;/section&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;/main&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &lt;!-- Add / Edit Modal --&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;div class=&quot;modal-backdrop&quot; id=&quot;truck-modal&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;div class=&quot;modal-box&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;modal-header&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;h3 id=&quot;modal-heading&quot;&gt;Add Monster Truck&lt;/h3&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;button class=&quot;btn-close-modal&quot; onclick=&quot;closeModal()&quot;&gt;&#10005;&lt;/button&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;cam-box&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div style=&quot;font-size: 0.85rem; font-weight: 700; color: #fff;&quot;&gt;Truck Photograph&lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div style=&quot;font-size: 0.72rem; color: var(--text-muted);&quot;&gt;Snap with phone camera or upload from files&lt;/div&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;cam-btn-grid&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;btn-cam-action&quot; style=&quot;cursor: pointer;&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#128247; Snap Camera</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;file&quot; accept=&quot;image/*&quot; capture=&quot;environment&quot; style=&quot;display: none;&quot; onchange=&quot;handleImageFile(event)&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;btn-cam-action&quot; style=&quot;cursor: pointer;&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#128193; Pick Photo</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;file&quot; accept=&quot;image/*&quot; style=&quot;display: none;&quot; onchange=&quot;handleImageFile(event)&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/label&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;preview-canvas-wrap&quot; id=&quot;canvas-wrapper&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;canvas id=&quot;image-canvas&quot;&gt;&lt;/canvas&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div style=&quot;font-size: 0.7rem; color: var(--text-muted); margin-top: 4px;&quot;&gt;Tap button below, then tap truck photo to sample color:&lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;eyedropper-bar&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button type=&quot;button&quot; class=&quot;btn-pick&quot; id=&quot;btn-pick-chassis&quot; onclick=&quot;activateColorPicker(&#39;chassis&#39;)&quot;&gt;Pick Chassis&lt;/button&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button type=&quot;button&quot; class=&quot;btn-pick&quot; id=&quot;btn-pick-rim&quot; onclick=&quot;activateColorPicker(&#39;rim&#39;)&quot;&gt;Pick Rim&lt;/button&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button type=&quot;button&quot; class=&quot;btn-pick&quot; id=&quot;btn-pick-tire&quot; onclick=&quot;activateColorPicker(&#39;tire&#39;)&quot;&gt;Pick Tire&lt;/button&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;form id=&quot;truck-form&quot; onsubmit=&quot;event.preventDefault(); saveTruckRecord();&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;hidden&quot; id=&quot;edit-truck-id&quot;&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-group&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;form-label&quot;&gt;Truck Model&lt;/label&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;select class=&quot;form-control&quot; id=&quot;input-model&quot; onchange=&quot;checkCustomModel(this.value)&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Grave Digger&quot;&gt;Grave Digger&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Megalodon&quot;&gt;Megalodon&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Max-D&quot;&gt;Max-D&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;El Toro Loco&quot;&gt;El Toro Loco&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Monster Mutt&quot;&gt;Monster Mutt&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Earth Shaker&quot;&gt;Earth Shaker&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Zombie&quot;&gt;Zombie&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Sparkle Smash&quot;&gt;Sparkle Smash&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Tech Deck Wreck Deck&quot;&gt;Tech Deck Wreck Deck&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;CUSTOM&quot;&gt;+ Other / Custom (Type Below)&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/select&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-group&quot; id=&quot;custom-name-wrap&quot; style=&quot;display: none;&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;form-label&quot;&gt;Custom Truck Name&lt;/label&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;input-custom-model&quot; placeholder=&quot;Enter custom truck name...&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-row&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-group&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;form-label&quot;&gt;Scale&lt;/label&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;select class=&quot;form-control&quot; id=&quot;input-scale&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;1:64&quot;&gt;1:64 Standard&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;Mini / Micro&quot;&gt;Mini / Micro (Blind Bag/Key)&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;1:24&quot;&gt;1:24 Large&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;option value=&quot;1:70&quot;&gt;1:70&lt;/option&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/select&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-group&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;form-label&quot;&gt;Series / Release Wave&lt;/label&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;input-series&quot; placeholder=&quot;e.g. Series 28, Neon Glow, Mini Series 4&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-row&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-group&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;form-label&quot;&gt;Chassis Color&lt;/label&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;input-chassis&quot; placeholder=&quot;Green, Black, Chrome, etc.&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-group&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;form-label&quot;&gt;Rim Color&lt;/label&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;input-rim&quot; placeholder=&quot;Purple, Chrome, Neon, etc.&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-row&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-group&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;form-label&quot;&gt;Tire Compound / Color&lt;/label&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;input-tire&quot; placeholder=&quot;Black BKT, Mud Splattered, etc.&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-group&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;label class=&quot;form-label&quot;&gt;Variation / Edition Name&lt;/label&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;input type=&quot;text&quot; class=&quot;form-control&quot; id=&quot;input-variation&quot; placeholder=&quot;Fire &amp; Ice, 40th Chrome, etc.&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;form-actions&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button type=&quot;button&quot; class=&quot;btn-cam-action&quot; onclick=&quot;closeModal()&quot;&gt;Cancel&lt;/button&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button type=&quot;submit&quot; class=&quot;btn-save&quot;&gt;Save Truck Spec&lt;/button&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;/form&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &lt;!-- Delete Confirmation Modal --&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;div class=&quot;modal-backdrop&quot; id=&quot;delete-modal&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;div class=&quot;modal-box confirm-modal-box&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;div class=&quot;danger-icon&quot;&gt;&#128465;&#65039;&lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;h3 style=&quot;margin-bottom: 8px;&quot;&gt;Delete Truck?&lt;/h3&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;p style=&quot;font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;&quot; id=&quot;delete-truck-desc&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; Are you sure you want to remove this record from your vault?</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;/p&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;div style=&quot;display: flex; gap: 10px; justify-content: center;&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;button class=&quot;btn-cam-action&quot; onclick=&quot;closeDeleteModal()&quot;&gt;Cancel&lt;/button&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;button class=&quot;btn-save&quot; style=&quot;background: var(--accent-danger); color: #fff;&quot; onclick=&quot;confirmDeleteTruck()&quot;&gt;Yes, Delete&lt;/button&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;/div&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &lt;!-- Toast Notification --&gt;</span></p><p class="c1"><span class="c2">&nbsp; &lt;div id=&quot;toast&quot;&gt;Truck recorded in JAM Vault!&lt;/div&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &lt;script&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; const STORAGE_KEY = &#39;jam_vault_collection_v2&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; let fleet = [];</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; let pendingImageData = null;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; let pendingDeleteId = null;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; let activePickerComponent = null;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; // Google Identity Config</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; let googleUser = null;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; let gapiToken = null;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; // Initial Defaults</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; const DEFAULT_FLEET = [</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; id: &#39;truck_1&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; model: &#39;Grave Digger&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; variation: &#39;30th Anniversary Edition&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; series: &#39;Series 14&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; scale: &#39;1:64&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; chassis: &#39;Purple&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; rim: &#39;Green&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; tire: &#39;Black BKT&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; image: &#39;https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&amp;fit=crop&amp;w=600&amp;q=80&#39;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; },</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; id: &#39;truck_2&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; model: &#39;Sparkle Smash&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; variation: &#39;First Edition Horns&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; series: &#39;Series 22&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; scale: &#39;1:64&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; chassis: &#39;Pink&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; rim: &#39;Teal&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; tire: &#39;White Wall&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; image: null</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; },</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; id: &#39;truck_3&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; model: &#39;Megalodon&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; variation: &#39;Translucent Mystery Key&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; series: &#39;Minis Series 3&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; scale: &#39;Mini / Micro&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; chassis: &#39;Clear Blue&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; rim: &#39;Silver&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; tire: &#39;Solid Gray&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; image: null</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; ];</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function init() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const stored = localStorage.getItem(STORAGE_KEY);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (stored) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; try { fleet = JSON.parse(stored); } catch(e) { fleet = DEFAULT_FLEET; }</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; } else {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; fleet = DEFAULT_FLEET;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; saveToLocalStorage();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; renderFleet();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function saveToLocalStorage() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; localStorage.setItem(STORAGE_KEY, JSON.stringify(fleet));</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function renderFleet() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const container = document.getElementById(&#39;truck-container&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const query = (document.getElementById(&#39;search-query&#39;).value || &#39;&#39;).toLowerCase();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const scaleFilter = document.getElementById(&#39;filter-scale&#39;).value;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const chassisFilter = (document.getElementById(&#39;filter-chassis&#39;).value || &#39;&#39;).toLowerCase();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const rimFilter = (document.getElementById(&#39;filter-rim&#39;).value || &#39;&#39;).toLowerCase();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const tireFilter = (document.getElementById(&#39;filter-tire&#39;).value || &#39;&#39;).toLowerCase();</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const filtered = fleet.filter(t =&gt; {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; const fullText = `${t.model} ${t.variation || &#39;&#39;} ${t.series || &#39;&#39;}`.toLowerCase();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; const matchesQuery = fullText.includes(query);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; const matchesScale = !scaleFilter || t.scale === scaleFilter;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; const matchesChassis = !chassisFilter || (t.chassis || &#39;&#39;).toLowerCase().includes(chassisFilter);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; const matchesRim = !rimFilter || (t.rim || &#39;&#39;).toLowerCase().includes(rimFilter);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; const matchesTire = !tireFilter || (t.tire || &#39;&#39;).toLowerCase().includes(tireFilter);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; return matchesQuery &amp;&amp; matchesScale &amp;&amp; matchesChassis &amp;&amp; matchesRim &amp;&amp; matchesTire;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; });</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (filtered.length === 0) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; container.innerHTML = `</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div style=&quot;grid-column: 1/-1; text-align: center; padding: 50px 20px; background: var(--card-bg); border-radius: 16px;&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div style=&quot;font-size: 2rem; margin-bottom: 8px;&quot;&gt;&#127937;&lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h3&gt;No Monster Trucks Found&lt;/h3&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;p style=&quot;color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;&quot;&gt;Try loosening your color search or tap &quot;+ Add Truck&quot; above!&lt;/p&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; `;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; return;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; container.innerHTML = filtered.map(t =&gt; `</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;truck-card&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;truck-img-box&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;scale-tag&quot;&gt;${escapeHtml(t.scale || &#39;1:64&#39;)}&lt;/span&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ${t.image </span></p><p class="c1"><span>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ? `&lt;img src=&quot;</span><img src="images/image1.png"><span class="c2">{escapeHtml(t.model)}&quot;&gt;` </span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; : `&lt;svg width=&quot;100&quot; height=&quot;70&quot; viewBox=&quot;0 0 100 70&quot; fill=&quot;none&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;rect x=&quot;25&quot; y=&quot;20&quot; width=&quot;50&quot; height=&quot;25&quot; rx=&quot;5&quot; fill=&quot;#374151&quot;/&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;circle cx=&quot;32&quot; cy=&quot;50&quot; r=&quot;14&quot; fill=&quot;#1f2937&quot; stroke=&quot;${getColorHex(t.rim)}&quot; stroke-width=&quot;4&quot;/&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;circle cx=&quot;68&quot; cy=&quot;50&quot; r=&quot;14&quot; fill=&quot;#1f2937&quot; stroke=&quot;${getColorHex(t.rim)}&quot; stroke-width=&quot;4&quot;/&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;rect x=&quot;20&quot; y=&quot;40&quot; width=&quot;60&quot; height=&quot;5&quot; fill=&quot;${getColorHex(t.chassis)}&quot;/&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&lt;/svg&gt;`</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;truck-body&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;truck-name-row&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;h4 class=&quot;truck-title&quot;&gt;${escapeHtml(t.model)}&lt;/h4&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;truck-series&quot;&gt;${escapeHtml(t.series || &#39;Standard Release&#39;)} &bull; ${escapeHtml(t.variation || &#39;Base&#39;)}&lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;color-chips-row&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;color-chip&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;color-chip-label&quot;&gt;Chassis&lt;/span&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;color-chip-val&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;dot-color&quot; style=&quot;background:${getColorHex(t.chassis)};&quot;&gt;&lt;/span&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ${escapeHtml(t.chassis || &#39;N/A&#39;)}</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/span&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;color-chip&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;color-chip-label&quot;&gt;Rims&lt;/span&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;color-chip-val&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;dot-color&quot; style=&quot;background:${getColorHex(t.rim)};&quot;&gt;&lt;/span&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ${escapeHtml(t.rim || &#39;N/A&#39;)}</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/span&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;color-chip&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;color-chip-label&quot;&gt;Tires&lt;/span&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;color-chip-val&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;span class=&quot;dot-color&quot; style=&quot;background:${getColorHex(t.tire)};&quot;&gt;&lt;/span&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ${escapeHtml(t.tire || &#39;N/A&#39;)}</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/span&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;div class=&quot;truck-card-actions&quot;&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button class=&quot;btn-edit&quot; onclick=&quot;openEditModal(&#39;${t.id}&#39;)&quot;&gt;&#9999;&#65039; Edit Spec&lt;/button&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;button class=&quot;btn-delete-trigger&quot; onclick=&quot;openDeleteModal(&#39;${t.id}&#39;)&quot;&gt;&#128465;&#65039; Delete&lt;/button&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &lt;/div&gt;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; `).join(&#39;&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function getColorHex(colorName) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (!colorName) return &#39;#9ca3af&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const c = colorName.toLowerCase();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (c.includes(&#39;green&#39;) || c.includes(&#39;glow&#39;)) return &#39;#10b981&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (c.includes(&#39;purple&#39;)) return &#39;#a855f7&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (c.includes(&#39;black&#39;) || c.includes(&#39;bkt&#39;)) return &#39;#1f2937&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (c.includes(&#39;chrome&#39;) || c.includes(&#39;silver&#39;)) return &#39;#e5e7eb&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (c.includes(&#39;yellow&#39;) || c.includes(&#39;neon&#39;)) return &#39;#facc15&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (c.includes(&#39;blue&#39;) || c.includes(&#39;ice&#39;)) return &#39;#3b82f6&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (c.includes(&#39;red&#39;) || c.includes(&#39;flame&#39;)) return &#39;#ef4444&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (c.includes(&#39;pink&#39;)) return &#39;#ec4899&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (c.includes(&#39;teal&#39;)) return &#39;#14b8a6&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (c.includes(&#39;gray&#39;)) return &#39;#6b7280&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; return &#39;#f59e0b&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function escapeHtml(text) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (!text) return &#39;&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; return String(text).replace(/&amp;/g, &#39;&amp;amp;&#39;).replace(/&lt;/g, &#39;&amp;lt;&#39;).replace(/&gt;/g, &#39;&amp;gt;&#39;).replace(/&quot;/g, &#39;&amp;quot;&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function applyFilters() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; renderFleet();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; /* Modal Operations */</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; window.openAddModal = function() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;edit-truck-id&#39;).value = &#39;&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;modal-heading&#39;).innerText = &#39;Add Monster Truck&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;truck-form&#39;).reset();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;input-model&#39;).value = &#39;Grave Digger&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;custom-name-wrap&#39;).style.display = &#39;none&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;canvas-wrapper&#39;).style.display = &#39;none&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; pendingImageData = null;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;truck-modal&#39;).classList.add(&#39;active&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; };</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; window.openEditModal = function(id) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const item = fleet.find(t =&gt; t.id === id);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (!item) return;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;edit-truck-id&#39;).value = item.id;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;modal-heading&#39;).innerText = &#39;Edit Monster Truck&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; </span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const modelSelect = document.getElementById(&#39;input-model&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const hasOption = Array.from(modelSelect.options).some(o =&gt; o.value === item.model);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (hasOption) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; modelSelect.value = item.model;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;custom-name-wrap&#39;).style.display = &#39;none&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; } else {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; modelSelect.value = &#39;CUSTOM&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;custom-name-wrap&#39;).style.display = &#39;block&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;input-custom-model&#39;).value = item.model;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;input-scale&#39;).value = item.scale || &#39;1:64&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;input-series&#39;).value = item.series || &#39;&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;input-chassis&#39;).value = item.chassis || &#39;&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;input-rim&#39;).value = item.rim || &#39;&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;input-tire&#39;).value = item.tire || &#39;&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;input-variation&#39;).value = item.variation || &#39;&#39;;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; pendingImageData = item.image || null;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (pendingImageData) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; drawImageOnCanvas(pendingImageData);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; } else {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;canvas-wrapper&#39;).style.display = &#39;none&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;truck-modal&#39;).classList.add(&#39;active&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; };</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; window.closeModal = function() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;truck-modal&#39;).classList.remove(&#39;active&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; };</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function checkCustomModel(val) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const wrap = document.getElementById(&#39;custom-name-wrap&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; wrap.style.display = (val === &#39;CUSTOM&#39;) ? &#39;block&#39; : &#39;none&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; /* Save Logic */</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function saveTruckRecord() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const editId = document.getElementById(&#39;edit-truck-id&#39;).value;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const modelSelect = document.getElementById(&#39;input-model&#39;).value;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; let finalModel = modelSelect;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (modelSelect === &#39;CUSTOM&#39;) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; finalModel = (document.getElementById(&#39;input-custom-model&#39;).value || &#39;&#39;).trim() || &#39;Custom Truck&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const truckData = {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; id: editId || &#39;truck_&#39; + Date.now(),</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; model: finalModel,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; scale: document.getElementById(&#39;input-scale&#39;).value,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; series: document.getElementById(&#39;input-series&#39;).value.trim(),</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; chassis: document.getElementById(&#39;input-chassis&#39;).value.trim(),</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; rim: document.getElementById(&#39;input-rim&#39;).value.trim(),</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; tire: document.getElementById(&#39;input-tire&#39;).value.trim(),</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; variation: document.getElementById(&#39;input-variation&#39;).value.trim(),</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; image: pendingImageData</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; };</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (editId) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; fleet = fleet.map(t =&gt; t.id === editId ? truckData : t);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; } else {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; fleet.unshift(truckData);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; saveToLocalStorage();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; renderFleet();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; closeModal();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; showToast(&#39;Truck saved in JAM Vault!&#39;);</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (googleUser) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; syncToGoogleDrive();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; /* Delete Handlers */</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; window.openDeleteModal = function(id) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; pendingDeleteId = id;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const item = fleet.find(t =&gt; t.id === id);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (item) {</span></p><p class="c1"><span>&nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;delete-truck-desc&#39;).innerText = `Are you sure you want to delete </span><img src="images/image2.png"><span class="c2">{item.variation || &#39;Base&#39;})?`;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;delete-modal&#39;).classList.add(&#39;active&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; };</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; window.closeDeleteModal = function() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;delete-modal&#39;).classList.remove(&#39;active&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; pendingDeleteId = null;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; };</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; window.confirmDeleteTruck = function() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (!pendingDeleteId) return;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; fleet = fleet.filter(t =&gt; t.id !== pendingDeleteId);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; saveToLocalStorage();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; renderFleet();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; closeDeleteModal();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; showToast(&#39;Record removed.&#39;);</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (googleUser) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; syncToGoogleDrive();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; };</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; /* Image Loading &amp; Color Loupe */</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function handleImageFile(e) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const file = e.target.files &amp;&amp; e.target.files[0];</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (!file) return;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const reader = new FileReader();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; reader.onload = function(event) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; const img = new Image();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; img.onload = function() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Downsample image for performant storage</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const maxDim = 800;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; let w = img.width;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; let h = img.height;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (w &gt; maxDim || h &gt; maxDim) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (w &gt; h) { h = (h / w) * maxDim; w = maxDim; }</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; else { w = (w / h) * maxDim; h = maxDim; }</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const canvas = document.createElement(&#39;canvas&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; canvas.width = w;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; canvas.height = h;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const ctx = canvas.getContext(&#39;2d&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ctx.drawImage(img, 0, 0, w, h);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; pendingImageData = canvas.toDataURL(&#39;image/jpeg&#39;, 0.85);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; drawImageOnCanvas(pendingImageData);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; };</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; img.src = event.target.result;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; };</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; reader.readAsDataURL(file);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function drawImageOnCanvas(src) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const wrapper = document.getElementById(&#39;canvas-wrapper&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const canvas = document.getElementById(&#39;image-canvas&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const ctx = canvas.getContext(&#39;2d&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const img = new Image();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; img.onload = function() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; wrapper.style.display = &#39;block&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; canvas.width = img.width;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; canvas.height = img.height;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; ctx.drawImage(img, 0, 0);</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; // Click listener for color extraction</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; canvas.onclick = function(evt) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (!activePickerComponent) return;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const rect = canvas.getBoundingClientRect();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const scaleX = canvas.width / rect.width;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const scaleY = canvas.height / rect.height;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const x = (evt.clientX - rect.left) * scaleX;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const y = (evt.clientY - rect.top) * scaleY;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const pixel = ctx.getImageData(x, y, 1, 1).data;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; const colorName = approximateColorName(pixel[0], pixel[1], pixel[2]);</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (activePickerComponent === &#39;chassis&#39;) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;input-chassis&#39;).value = colorName;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else if (activePickerComponent === &#39;rim&#39;) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;input-rim&#39;).value = colorName;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; } else if (activePickerComponent === &#39;tire&#39;) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;input-tire&#39;).value = colorName;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; resetPickers();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; showToast(`Sampled ${colorName} for ${activePickerComponent}!`);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; };</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; };</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; img.src = src;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function activateColorPicker(type) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; resetPickers();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; activePickerComponent = type;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const btn = document.getElementById(`btn-pick-${type}`);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (btn) btn.classList.add(&#39;active&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; showToast(`Tap on the truck image to pick ${type} color`);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function resetPickers() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; activePickerComponent = null;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; [&#39;chassis&#39;, &#39;rim&#39;, &#39;tire&#39;].forEach(k =&gt; {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; const btn = document.getElementById(`btn-pick-${k}`);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; if (btn) btn.classList.remove(&#39;active&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; });</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function approximateColorName(r, g, b) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; // Basic heuristic for common monster truck finishes</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const max = Math.max(r, g, b);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const min = Math.min(r, g, b);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const diff = max - min;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (max &lt; 50) return &#39;Black BKT&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (min &gt; 200) return &#39;White&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (diff &lt; 30) return &#39;Silver / Chrome&#39;;</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (r &gt; 150 &amp;&amp; g &lt; 80 &amp;&amp; b &lt; 80) return &#39;Red&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (g &gt; 140 &amp;&amp; r &lt; 100) return &#39;Green Glow&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (b &gt; 150 &amp;&amp; r &lt; 100) return &#39;Blue Ice&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (r &gt; 140 &amp;&amp; b &gt; 140 &amp;&amp; g &lt; 100) return &#39;Purple&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (r &gt; 180 &amp;&amp; g &gt; 150 &amp;&amp; b &lt; 80) return &#39;Neon Yellow&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (r &gt; 180 &amp;&amp; g &gt; 90 &amp;&amp; b &lt; 60) return &#39;Orange&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; return `Custom (${r}, ${g}, ${b})`;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; /* Google Auth &amp; Drive Sync */</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function toggleUserMenu() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const menu = document.getElementById(&#39;user-menu&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; menu.classList.toggle(&#39;active&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function handleGoogleSignIn() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; // Standard Google Identity token client setup</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; try {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; const client = google.accounts.oauth2.initTokenClient({</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; client_id: &#39;1080000000000-example.apps.googleusercontent.com&#39;, // Replace with your OAuth Client ID when hosting</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; scope: &#39;https://www.googleapis.com/auth/drive.file&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; callback: (tokenResponse) =&gt; {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; if (tokenResponse &amp;&amp; tokenResponse.access_token) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; gapiToken = tokenResponse.access_token;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; googleUser = { name: &#39;Google Collector&#39;, email: &#39;connected@google.com&#39; };</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;header-user-name&#39;).innerText = &#39;Google User&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;header-avatar&#39;).innerText = &#39;&#10003;&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;menu-user-title&#39;).innerText = &#39;Google Drive Connected&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;menu-user-email&#39;).innerText = &#39;Cloud backup active&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; showToast(&#39;Signed in with Google!&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; syncToGoogleDrive();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; });</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; client.requestAccessToken();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; } catch(err) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; // Fallback demo auth for local browser testing</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; googleUser = { name: &#39;Demo Collector&#39;, email: &#39;demo@collector.com&#39; };</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;header-user-name&#39;).innerText = &#39;Demo Collector&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;header-avatar&#39;).innerText = &#39;D&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;menu-user-title&#39;).innerText = &#39;Demo Cloud Mode&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; document.getElementById(&#39;menu-user-email&#39;).innerText = &#39;Cloud simulation active&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; showToast(&#39;Demo account connected (Configure OAuth client for live Google Drive API)&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function syncToGoogleDrive() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (!gapiToken) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; showToast(&#39;Local copy preserved (Sign in to sync with Google Drive)&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; return;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; // Push file to Drive REST API v3</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; fetch(&#39;https://www.googleapis.com/upload/drive/v3/files?uploadType=media&#39;, {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; method: &#39;POST&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; headers: {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#39;Authorization&#39;: `Bearer ${gapiToken}`,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &#39;Content-Type&#39;: &#39;application/json&#39;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; },</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; body: JSON.stringify({</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; app: &#39;JAM Vault&#39;,</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; updatedAt: new Date().toISOString(),</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; fleet: fleet</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; })</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; })</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; .then(res =&gt; res.json())</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; .then(() =&gt; showToast(&#39;Synced to Google Drive!&#39;))</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; .catch(() =&gt; showToast(&#39;Sync error. Local copy saved.&#39;));</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function restoreFromGoogleDrive() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; if (!gapiToken) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; showToast(&#39;Please sign in to Google Drive first&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; &nbsp; return;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; }</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; showToast(&#39;Searching Google Drive for jam_vault_backup.json...&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function signOutUser() {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; googleUser = null;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; gapiToken = null;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;header-user-name&#39;).innerText = &#39;Guest&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;header-avatar&#39;).innerText = &#39;G&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;menu-user-title&#39;).innerText = &#39;Google Cloud Sync&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; document.getElementById(&#39;menu-user-email&#39;).innerText = &#39;Sign in to back up to Google Drive&#39;;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; toggleUserMenu();</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; showToast(&#39;Signed out.&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; function showToast(msg) {</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; const toast = document.getElementById(&#39;toast&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; toast.innerText = msg;</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; toast.classList.add(&#39;show&#39;);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; &nbsp; setTimeout(() =&gt; toast.classList.remove(&#39;show&#39;), 2600);</span></p><p class="c1"><span class="c2">&nbsp; &nbsp; }</span></p><p class="c0"><span class="c2"></span></p><p class="c1"><span class="c2">&nbsp; &nbsp; window.addEventListener(&#39;DOMContentLoaded&#39;, init);</span></p><p class="c1"><span class="c2">&nbsp; &lt;/script&gt;</span></p><p class="c1"><span class="c2">&lt;/body&gt;</span></p><p class="c1"><span class="c2">&lt;/html&gt;</span></p><p class="c0"><span class="c2"></span></p><p class="c0"><span class="c2"></span></p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>JAM Vault — Monster Truck & Die-Cast Collector</title>
+  <link rel="icon" type="image/jpeg" href="https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&fit=crop&w=128&q=80">
+  <link rel="apple-touch-icon" href="https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&fit=crop&w=180&q=80">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+  <style>
+    :root {
+      --bg-dark: #0a0c10;
+      --card-bg: rgba(18, 22, 32, 0.85);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --accent-yellow: #f59e0b;
+      --accent-yellow-glow: rgba(245, 158, 11, 0.3);
+      --accent-neon: #10b981;
+      --accent-danger: #ef4444;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --radius-lg: 16px;
+      --radius-md: 10px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        radial-gradient(circle at top right, rgba(245, 158, 11, 0.08), transparent 400px),
+        radial-gradient(circle at bottom left, rgba(16, 185, 129, 0.05), transparent 400px);
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      padding-bottom: 90px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(16px);
+      background: rgba(10, 12, 16, 0.85);
+      border-bottom: 1px solid var(--card-border);
+      padding: 12px 18px;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+    }
+
+    .brand-logo-img {
+      height: 44px;
+      width: auto;
+      filter: drop-shadow(0 2px 8px var(--accent-yellow-glow));
+    }
+
+    .brand-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .badge-pro {
+      font-size: 0.65rem;
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: #000;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-add-primary {
+      background: linear-gradient(135deg, #f59e0b, #fbbf24);
+      color: #000;
+      border: none;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 8px 16px;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      box-shadow: 0 4px 14px var(--accent-yellow-glow);
+      transition: transform 0.15s ease;
+    }
+
+    .btn-add-primary:active {
+      transform: scale(0.96);
+    }
+
+    .user-pill {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid var(--card-border);
+      padding: 6px 12px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.82rem;
+      color: #e5e7eb;
+      cursor: pointer;
+    }
+
+    .user-avatar {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: #374151;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.75rem;
+      overflow: hidden;
+    }
+
+    main {
+      max-width: 1200px;
+      margin: 18px auto;
+      padding: 0 16px;
+    }
+
+    .filter-panel {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      padding: 14px 18px;
+      margin-bottom: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+      backdrop-filter: blur(12px);
+    }
+
+    .search-input-wrap {
+      flex: 1;
+      min-width: 220px;
+      position: relative;
+    }
+
+    .search-input-wrap input {
+      width: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 10px 14px 10px 38px;
+      color: #fff;
+      font-size: 0.9rem;
+      outline: none;
+    }
+
+    .search-input-wrap input:focus {
+      border-color: var(--accent-yellow);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    .filter-selects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-select {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 9px 12px;
+      color: #d1d5db;
+      font-size: 0.82rem;
+      outline: none;
+    }
+
+    .truck-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 20px;
+    }
+
+    .truck-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .truck-card:hover {
+      border-color: rgba(245, 158, 11, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .truck-img-box {
+      width: 100%;
+      height: 190px;
+      background: #0f131a;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .truck-img-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .scale-tag {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(8px);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: var(--accent-yellow);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .truck-body {
+      padding: 16px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .truck-name-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .truck-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .truck-series {
+      font-size: 0.78rem;
+      color: var(--accent-yellow);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+
+    .color-chips-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+
+    .color-chip {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 6px 8px;
+      border-radius: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .color-chip-label {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .color-chip-val {
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+
+    .dot-color {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      display: inline-block;
+      flex-shrink: 0;
+    }
+
+    .truck-card-actions {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 10px;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      margin-top: auto;
+    }
+
+    .btn-edit {
+      background: rgba(255, 255, 255, 0.08);
+      color: #fff;
+      border: none;
+      padding: 6px 14px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    .btn-delete-trigger {
+      background: transparent;
+      color: #ef4444;
+      border: none;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      cursor: pointer;
+      padding: 6px 8px;
+      opacity: 0.8;
+    }
+
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+    }
+
+    .modal-backdrop.active {
+      display: flex;
+    }
+
+    .modal-box {
+      background: #121620;
+      border: 1px solid var(--card-border);
+      border-radius: 20px;
+      width: 100%;
+      max-width: 580px;
+      max-height: 90vh;
+      overflow-y: auto;
+      padding: 24px;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+    }
+
+    .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      padding-bottom: 12px;
+    }
+
+    .modal-header h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+    }
+
+    .btn-close-modal {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.4rem;
+      cursor: pointer;
+    }
+
+    .cam-box {
+      background: #090b10;
+      border: 2px dashed rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 16px;
+      text-align: center;
+      margin-bottom: 18px;
+    }
+
+    .cam-btn-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .btn-cam-action {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 10px;
+      color: #fff;
+      font-size: 0.82rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .preview-canvas-wrap {
+      margin-top: 12px;
+      position: relative;
+      display: none;
+      text-align: center;
+    }
+
+    #image-canvas {
+      max-width: 100%;
+      max-height: 220px;
+      border-radius: 8px;
+      cursor: crosshair;
+    }
+
+    .eyedropper-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .btn-pick {
+      background: #1f2937;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .btn-pick.active {
+      border-color: var(--accent-yellow);
+      background: rgba(245, 158, 11, 0.2);
+      color: var(--accent-yellow);
+    }
+
+    .form-group {
+      margin-bottom: 14px;
+    }
+
+    .form-label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .form-control {
+      width: 100%;
+      background: #090b10;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      padding: 10px 12px;
+      color: #fff;
+      font-size: 0.88rem;
+      outline: none;
+    }
+
+    .form-control:focus {
+      border-color: var(--accent-yellow);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .form-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 10px;
+      margin-top: 24px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 14px;
+    }
+
+    .btn-save {
+      background: var(--accent-yellow);
+      color: #000;
+      font-weight: 800;
+      border: none;
+      padding: 10px 22px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      cursor: pointer;
+    }
+
+    .confirm-modal-box {
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .danger-icon {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background: rgba(17, 24, 39, 0.95);
+      border: 1px solid var(--accent-yellow);
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      z-index: 200;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    #toast.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    .user-menu {
+      position: absolute;
+      top: 60px;
+      right: 18px;
+      background: #161b26;
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 14px;
+      width: 260px;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
+      display: none;
+      z-index: 60;
+    }
+
+    .user-menu.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-container">
+      <div class="brand-wrap" onclick="location.reload()">
+        <img class="brand-logo-img" src="https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&fit=crop&w=128&q=80" alt="JAM Vault Logo">
+        <div class="brand-title">
+          JAM VAULT <span class="badge-pro">PRO</span>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button class="btn-add-primary" onclick="window.openAddModal()">
+          <span>+ Add Truck</span>
+        </button>
+
+        <div class="user-pill" onclick="toggleUserMenu()">
+          <div class="user-avatar" id="header-avatar">G</div>
+          <span id="header-user-name">Guest</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="user-menu" id="user-menu">
+    <div style="font-weight: 700; margin-bottom: 4px;" id="menu-user-title">Google Cloud Sync</div>
+    <div style="font-size: 0.75rem; color: var(--text-muted); margin-bottom: 12px;" id="menu-user-email">Sign in to back up to Google Drive</div>
+    <button class="btn-cam-action" style="width: 100%; margin-bottom: 8px;" id="btn-google-auth" onclick="handleGoogleSignIn()">
+      🔑 Sign In with Google
+    </button>
+    <button class="btn-cam-action" style="width: 100%; margin-bottom: 8px;" onclick="syncToGoogleDrive()">
+      ☁️ Backup to Google Drive
+    </button>
+    <button class="btn-cam-action" style="width: 100%; margin-bottom: 8px;" onclick="restoreFromGoogleDrive()">
+      📥 Restore from Google Drive
+    </button>
+    <button class="btn-cam-action" style="width: 100%; color: #ef4444;" onclick="signOutUser()">
+      Sign Out
+    </button>
+  </div>
+
+  <main>
+    <section class="filter-panel">
+      <div class="search-input-wrap">
+        <span class="search-icon">🔍</span>
+        <input type="text" id="search-query" placeholder="Search by name (Grave Digger, Sparkle Smash, etc)..." oninput="applyFilters()">
+      </div>
+
+      <div class="filter-selects">
+        <select class="filter-select" id="filter-scale" onchange="applyFilters()">
+          <option value="">All Scales</option>
+          <option value="1:64">1:64 Scale</option>
+          <option value="Mini / Micro">Mini / Micro</option>
+          <option value="1:24">1:24 Scale</option>
+        </select>
+
+        <select class="filter-select" id="filter-chassis" onchange="applyFilters()">
+          <option value="">Chassis: All</option>
+          <option value="Green">Green</option>
+          <option value="Purple">Purple</option>
+          <option value="Black">Black</option>
+          <option value="Silver / Chrome">Silver / Chrome</option>
+          <option value="Yellow / Neon">Yellow / Neon</option>
+          <option value="Blue">Blue</option>
+          <option value="Red">Red</option>
+        </select>
+
+        <select class="filter-select" id="filter-rim" onchange="applyFilters()">
+          <option value="">Rims: All</option>
+          <option value="Green">Green</option>
+          <option value="Purple">Purple</option>
+          <option value="Chrome">Chrome</option>
+          <option value="Black">Black</option>
+          <option value="Neon Yellow">Neon Yellow</option>
+          <option value="Blue">Blue</option>
+          <option value="Red">Red</option>
+        </select>
+
+        <select class="filter-select" id="filter-tire" onchange="applyFilters()">
+          <option value="">Tires: All</option>
+          <option value="Black BKT">Black BKT</option>
+          <option value="Mud Splattered">Mud Splattered</option>
+          <option value="Blue Ice">Blue Ice</option>
+          <option value="Green Glow">Green Glow</option>
+          <option value="Solid Gray">Solid Gray</option>
+        </select>
+      </div>
+    </section>
+
+    <section class="truck-grid" id="truck-container"></section>
+  </main>
+
+  <div class="modal-backdrop" id="truck-modal">
+    <div class="modal-box">
+      <div class="modal-header">
+        <h3 id="modal-heading">Add Monster Truck</h3>
+        <button class="btn-close-modal" onclick="closeModal()">✕</button>
+      </div>
+
+      <div class="cam-box">
+        <div style="font-size: 0.85rem; font-weight: 700; color: #fff;">Truck Photograph</div>
+        <div style="font-size: 0.72rem; color: var(--text-muted);">Snap with phone camera or upload from files</div>
+
+        <div class="cam-btn-grid">
+          <label class="btn-cam-action" style="cursor: pointer;">
+            📷 Snap Camera
+            <input type="file" accept="image/*" capture="environment" style="display: none;" onchange="handleImageFile(event)">
+          </label>
+          <label class="btn-cam-action" style="cursor: pointer;">
+            📁 Pick Photo
+            <input type="file" accept="image/*" style="display: none;" onchange="handleImageFile(event)">
+          </label>
+        </div>
+
+        <div class="preview-canvas-wrap" id="canvas-wrapper">
+          <canvas id="image-canvas"></canvas>
+          <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 4px;">Tap button below, then tap truck photo to sample color:</div>
+          <div class="eyedropper-bar">
+            <button type="button" class="btn-pick" id="btn-pick-chassis" onclick="activateColorPicker('chassis')">Pick Chassis</button>
+            <button type="button" class="btn-pick" id="btn-pick-rim" onclick="activateColorPicker('rim')">Pick Rim</button>
+            <button type="button" class="btn-pick" id="btn-pick-tire" onclick="activateColorPicker('tire')">Pick Tire</button>
+          </div>
+        </div>
+      </div>
+
+      <form id="truck-form" onsubmit="event.preventDefault(); saveTruckRecord();">
+        <input type="hidden" id="edit-truck-id">
+
+        <div class="form-group">
+          <label class="form-label">Truck Model</label>
+          <select class="form-control" id="input-model" onchange="checkCustomModel(this.value)">
+            <option value="Grave Digger">Grave Digger</option>
+            <option value="Megalodon">Megalodon</option>
+            <option value="Max-D">Max-D</option>
+            <option value="El Toro Loco">El Toro Loco</option>
+            <option value="Monster Mutt">Monster Mutt</option>
+            <option value="Earth Shaker">Earth Shaker</option>
+            <option value="Zombie">Zombie</option>
+            <option value="Sparkle Smash">Sparkle Smash</option>
+            <option value="Tech Deck Wreck Deck">Tech Deck Wreck Deck</option>
+            <option value="CUSTOM">+ Other / Custom (Type Below)</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="custom-name-wrap" style="display: none;">
+          <label class="form-label">Custom Truck Name</label>
+          <input type="text" class="form-control" id="input-custom-model" placeholder="Enter custom truck name...">
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Scale</label>
+            <select class="form-control" id="input-scale">
+              <option value="1:64">1:64 Standard</option>
+              <option value="Mini / Micro">Mini / Micro (Blind Bag/Key)</option>
+              <option value="1:24">1:24 Large</option>
+              <option value="1:70">1:70</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Series / Release Wave</label>
+            <input type="text" class="form-control" id="input-series" placeholder="e.g. Series 28, Neon Glow, Mini Series 4">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Chassis Color</label>
+            <input type="text" class="form-control" id="input-chassis" placeholder="Green, Black, Chrome, etc.">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Rim Color</label>
+            <input type="text" class="form-control" id="input-rim" placeholder="Purple, Chrome, Neon, etc.">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Tire Compound / Color</label>
+            <input type="text" class="form-control" id="input-tire" placeholder="Black BKT, Mud Splattered, etc.">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Variation / Edition Name</label>
+            <input type="text" class="form-control" id="input-variation" placeholder="Fire & Ice, 40th Chrome, etc.">
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="btn-cam-action" onclick="closeModal()">Cancel</button>
+          <button type="submit" class="btn-save">Save Truck Spec</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal-backdrop" id="delete-modal">
+    <div class="modal-box confirm-modal-box">
+      <div class="danger-icon">🗑️</div>
+      <h3 style="margin-bottom: 8px;">Delete Truck?</h3>
+      <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 20px;" id="delete-truck-desc">
+        Are you sure you want to remove this record from your vault?
+      </p>
+      <div style="display: flex; gap: 10px; justify-content: center;">
+        <button class="btn-cam-action" onclick="closeDeleteModal()">Cancel</button>
+        <button class="btn-save" style="background: var(--accent-danger); color: #fff;" onclick="confirmDeleteTruck()">Yes, Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast">Truck recorded in JAM Vault!</div>
+
+  <script>
+    const STORAGE_KEY = 'jam_vault_collection_v2';
+    let fleet = [];
+    let pendingImageData = null;
+    let pendingDeleteId = null;
+    let activePickerComponent = null;
+
+    let googleUser = null;
+    let gapiToken = null;
+
+    const DEFAULT_FLEET = [
+      {
+        id: 'truck_1',
+        model: 'Grave Digger',
+        variation: '30th Anniversary Edition',
+        series: 'Series 14',
+        scale: '1:64',
+        chassis: 'Purple',
+        rim: 'Green',
+        tire: 'Black BKT',
+        image: 'https://images.unsplash.com/photo-1594787318286-3d835c1d207f?auto=format&fit=crop&w=600&q=80'
+      },
+      {
+        id: 'truck_2',
+        model: 'Sparkle Smash',
+        variation: 'First Edition Horns',
+        series: 'Series 22',
+        scale: '1:64',
+        chassis: 'Pink',
+        rim: 'Teal',
+        tire: 'White Wall',
+        image: null
+      },
+      {
+        id: 'truck_3',
+        model: 'Megalodon',
+        variation: 'Translucent Mystery Key',
+        series: 'Minis Series 3',
+        scale: 'Mini / Micro',
+        chassis: 'Clear Blue',
+        rim: 'Silver',
+        tire: 'Solid Gray',
+        image: null
+      }
+    ];
+
+    function init() {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        try { fleet = JSON.parse(stored); } catch(e) { fleet = DEFAULT_FLEET; }
+      } else {
+        fleet = DEFAULT_FLEET;
+        saveToLocalStorage();
+      }
+      renderFleet();
+    }
+
+    function saveToLocalStorage() {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(fleet));
+    }
+
+    function renderFleet() {
+      const container = document.getElementById('truck-container');
+      const query = (document.getElementById('search-query').value || '').toLowerCase();
+      const scaleFilter = document.getElementById('filter-scale').value;
+      const chassisFilter = (document.getElementById('filter-chassis').value || '').toLowerCase();
+      const rimFilter = (document.getElementById('filter-rim').value || '').toLowerCase();
+      const tireFilter = (document.getElementById('filter-tire').value || '').toLowerCase();
+
+      const filtered = fleet.filter(t => {
+        const fullText = `${t.model} ${t.variation || ''} ${t.series || ''}`.toLowerCase();
+        const matchesQuery = fullText.includes(query);
+        const matchesScale = !scaleFilter || t.scale === scaleFilter;
+        const matchesChassis = !chassisFilter || (t.chassis || '').toLowerCase().includes(chassisFilter);
+        const matchesRim = !rimFilter || (t.rim || '').toLowerCase().includes(rimFilter);
+        const matchesTire = !tireFilter || (t.tire || '').toLowerCase().includes(tireFilter);
+        return matchesQuery && matchesScale && matchesChassis && matchesRim && matchesTire;
+      });
+
+      if (filtered.length === 0) {
+        container.innerHTML = `
+          <div style="grid-column: 1/-1; text-align: center; padding: 50px 20px; background: var(--card-bg); border-radius: 16px;">
+            <div style="font-size: 2rem; margin-bottom: 8px;">🏁</div>
+            <h3>No Monster Trucks Found</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Try loosening your color search or tap "+ Add Truck" above!</p>
+          </div>
+        `;
+        return;
+      }
+
+      container.innerHTML = filtered.map(t => `
+        <div class="truck-card">
+          <div class="truck-img-box">
+            <span class="scale-tag">${escapeHtml(t.scale || '1:64')}</span>
+            ${t.image 
+              ? `<img src="${t.image}" alt="${escapeHtml(t.model)}">` 
+              : `<svg width="100" height="70" viewBox="0 0 100 70" fill="none">
+                   <rect x="25" y="20" width="50" height="25" rx="5" fill="#374151"/>
+                   <circle cx="32" cy="50" r="14" fill="#1f2937" stroke="${getColorHex(t.rim)}" stroke-width="4"/>
+                   <circle cx="68" cy="50" r="14" fill="#1f2937" stroke="${getColorHex(t.rim)}" stroke-width="4"/>
+                   <rect x="20" y="40" width="60" height="5" fill="${getColorHex(t.chassis)}"/>
+                 </svg>`
+            }
+          </div>
+          <div class="truck-body">
+            <div class="truck-name-row">
+              <h4 class="truck-title">${escapeHtml(t.model)}</h4>
+            </div>
+            <div class="truck-series">${escapeHtml(t.series || 'Standard Release')} • ${escapeHtml(t.variation || 'Base')}</div>
+            <div class="color-chips-row">
+              <div class="color-chip">
+                <span class="color-chip-label">Chassis</span>
+                <span class="color-chip-val">
+                  <span class="dot-color" style="background:${getColorHex(t.chassis)};"></span>
+                  ${escapeHtml(t.chassis || 'N/A')}
+                </span>
+              </div>
+              <div class="color-chip">
+                <span class="color-chip-label">Rims</span>
+                <span class="color-chip-val">
+                  <span class="dot-color" style="background:${getColorHex(t.rim)};"></span>
+                  ${escapeHtml(t.rim || 'N/A')}
+                </span>
+              </div>
+              <div class="color-chip">
+                <span class="color-chip-label">Tires</span>
+                <span class="color-chip-val">
+                  <span class="dot-color" style="background:${getColorHex(t.tire)};"></span>
+                  ${escapeHtml(t.tire || 'N/A')}
+                </span>
+              </div>
+            </div>
+            <div class="truck-card-actions">
+              <button class="btn-edit" onclick="openEditModal('${t.id}')">✏️ Edit Spec</button>
+              <button class="btn-delete-trigger" onclick="openDeleteModal('${t.id}')">🗑️ Delete</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function getColorHex(colorName) {
+      if (!colorName) return '#9ca3af';
+      const c = colorName.toLowerCase();
+      if (c.includes('green') || c.includes('glow')) return '#10b981';
+      if (c.includes('purple')) return '#a855f7';
+      if (c.includes('black') || c.includes('bkt')) return '#1f2937';
+      if (c.includes('chrome') || c.includes('silver')) return '#e5e7eb';
+      if (c.includes('yellow') || c.includes('neon')) return '#facc15';
+      if (c.includes('blue') || c.includes('ice')) return '#3b82f6';
+      if (c.includes('red') || c.includes('flame')) return '#ef4444';
+      if (c.includes('pink')) return '#ec4899';
+      if (c.includes('teal')) return '#14b8a6';
+      if (c.includes('gray')) return '#6b7280';
+      return '#f59e0b';
+    }
+
+    function escapeHtml(text) {
+      if (!text) return '';
+      return String(text).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    function applyFilters() {
+      renderFleet();
+    }
+
+    window.openAddModal = function() {
+      document.getElementById('edit-truck-id').value = '';
+      document.getElementById('modal-heading').innerText = 'Add Monster Truck';
+      document.getElementById('truck-form').reset();
+      document.getElementById('input-model').value = 'Grave Digger';
+      document.getElementById('custom-name-wrap').style.display = 'none';
+      document.getElementById('canvas-wrapper').style.display = 'none';
+      pendingImageData = null;
+      document.getElementById('truck-modal').classList.add('active');
+    };
+
+    window.openEditModal = function(id) {
+      const item = fleet.find(t => t.id === id);
+      if (!item) return;
+
+      document.getElementById('edit-truck-id').value = item.id;
+      document.getElementById('modal-heading').innerText = 'Edit Monster Truck';
+      
+      const modelSelect = document.getElementById('input-model');
+      const hasOption = Array.from(modelSelect.options).some(o => o.value === item.model);
+      if (hasOption) {
+        modelSelect.value = item.model;
+        document.getElementById('custom-name-wrap').style.display = 'none';
+      } else {
+        modelSelect.value = 'CUSTOM';
+        document.getElementById('custom-name-wrap').style.display = 'block';
+        document.getElementById('input-custom-model').value = item.model;
+      }
+
+      document.getElementById('input-scale').value = item.scale || '1:64';
+      document.getElementById('input-series').value = item.series || '';
+      document.getElementById('input-chassis').value = item.chassis || '';
+      document.getElementById('input-rim').value = item.rim || '';
+      document.getElementById('input-tire').value = item.tire || '';
+      document.getElementById('input-variation').value = item.variation || '';
+
+      pendingImageData = item.image || null;
+      if (pendingImageData) {
+        drawImageOnCanvas(pendingImageData);
+      } else {
+        document.getElementById('canvas-wrapper').style.display = 'none';
+      }
+
+      document.getElementById('truck-modal').classList.add('active');
+    };
+
+    window.closeModal = function() {
+      document.getElementById('truck-modal').classList.remove('active');
+    };
+
+    function checkCustomModel(val) {
+      const wrap = document.getElementById('custom-name-wrap');
+      wrap.style.display = (val === 'CUSTOM') ? 'block' : 'none';
+    }
+
+    function saveTruckRecord() {
+      const editId = document.getElementById('edit-truck-id').value;
+      const modelSelect = document.getElementById('input-model').value;
+      let finalModel = modelSelect;
+      if (modelSelect === 'CUSTOM') {
+        finalModel = (document.getElementById('input-custom-model').value || '').trim() || 'Custom Truck';
+      }
+
+      const truckData = {
+        id: editId || 'truck_' + Date.now(),
+        model: finalModel,
+        scale: document.getElementById('input-scale').value,
+        series: document.getElementById('input-series').value.trim(),
+        chassis: document.getElementById('input-chassis').value.trim(),
+        rim: document.getElementById('input-rim').value.trim(),
+        tire: document.getElementById('input-tire').value.trim(),
+        variation: document.getElementById('input-variation').value.trim(),
+        image: pendingImageData
+      };
+
+      if (editId) {
+        fleet = fleet.map(t => t.id === editId ? truckData : t);
+      } else {
+        fleet.unshift(truckData);
+      }
+
+      saveToLocalStorage();
+      renderFleet();
+      closeModal();
+      showToast('Truck saved in JAM Vault!');
+
+      if (googleUser) {
+        syncToGoogleDrive();
+      }
+    }
+
+    window.openDeleteModal = function(id) {
+      pendingDeleteId = id;
+      const item = fleet.find(t => t.id === id);
+      if (item) {
+        document.getElementById('delete-truck-desc').innerText = `Are you sure you want to delete ${item.model} (${item.variation || 'Base'})?`;
+      }
+      document.getElementById('delete-modal').classList.add('active');
+    };
+
+    window.closeDeleteModal = function() {
+      document.getElementById('delete-modal').classList.remove('active');
+      pendingDeleteId = null;
+    };
+
+    window.confirmDeleteTruck = function() {
+      if (!pendingDeleteId) return;
+      fleet = fleet.filter(t => t.id !== pendingDeleteId);
+      saveToLocalStorage();
+      renderFleet();
+      closeDeleteModal();
+      showToast('Record removed.');
+
+      if (googleUser) {
+        syncToGoogleDrive();
+      }
+    };
+
+    function handleImageFile(e) {
+      const file = e.target.files && e.target.files[0];
+      if (!file) return;
+
+      const reader = new FileReader();
+      reader.onload = function(event) {
+        const img = new Image();
+        img.onload = function() {
+          const maxDim = 800;
+          let w = img.width;
+          let h = img.height;
+          if (w > maxDim || h > maxDim) {
+            if (w > h) { h = (h / w) * maxDim; w = maxDim; }
+            else { w = (w / h) * maxDim; h = maxDim; }
+          }
+          const canvas = document.createElement('canvas');
+          canvas.width = w;
+          canvas.height = h;
+          const ctx = canvas.getContext('2d');
+          ctx.drawImage(img, 0, 0, w, h);
+          pendingImageData = canvas.toDataURL('image/jpeg', 0.85);
+          drawImageOnCanvas(pendingImageData);
+        };
+        img.src = event.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+
+    function drawImageOnCanvas(src) {
+      const wrapper = document.getElementById('canvas-wrapper');
+      const canvas = document.getElementById('image-canvas');
+      const ctx = canvas.getContext('2d');
+      const img = new Image();
+      img.onload = function() {
+        wrapper.style.display = 'block';
+        canvas.width = img.width;
+        canvas.height = img.height;
+        ctx.drawImage(img, 0, 0);
+
+        canvas.onclick = function(evt) {
+          if (!activePickerComponent) return;
+          const rect = canvas.getBoundingClientRect();
+          const scaleX = canvas.width / rect.width;
+          const scaleY = canvas.height / rect.height;
+          const x = (evt.clientX - rect.left) * scaleX;
+          const y = (evt.clientY - rect.top) * scaleY;
+          const pixel = ctx.getImageData(x, y, 1, 1).data;
+          const colorName = approximateColorName(pixel[0], pixel[1], pixel[2]);
+
+          if (activePickerComponent === 'chassis') {
+            document.getElementById('input-chassis').value = colorName;
+          } else if (activePickerComponent === 'rim') {
+            document.getElementById('input-rim').value = colorName;
+          } else if (activePickerComponent === 'tire') {
+            document.getElementById('input-tire').value = colorName;
+          }
+
+          resetPickers();
+          showToast(`Sampled ${colorName} for ${activePickerComponent}!`);
+        };
+      };
+      img.src = src;
+    }
+
+    function activateColorPicker(type) {
+      resetPickers();
+      activePickerComponent = type;
+      const btn = document.getElementById(`btn-pick-${type}`);
+      if (btn) btn.classList.add('active');
+      showToast(`Tap on the truck image to pick ${type} color`);
+    }
+
+    function resetPickers() {
+      activePickerComponent = null;
+      ['chassis', 'rim', 'tire'].forEach(k => {
+        const btn = document.getElementById(`btn-pick-${k}`);
+        if (btn) btn.classList.remove('active');
+      });
+    }
+
+    function approximateColorName(r, g, b) {
+      const max = Math.max(r, g, b);
+      const min = Math.min(r, g, b);
+      const diff = max - min;
+
+      if (max < 50) return 'Black BKT';
+      if (min > 200) return 'White';
+      if (diff < 30) return 'Silver / Chrome';
+
+      if (r > 150 && g < 80 && b < 80) return 'Red';
+      if (g > 140 && r < 100) return 'Green Glow';
+      if (b > 150 && r < 100) return 'Blue Ice';
+      if (r > 140 && b > 140 && g < 100) return 'Purple';
+      if (r > 180 && g > 150 && b < 80) return 'Neon Yellow';
+      if (r > 180 && g > 90 && b < 60) return 'Orange';
+      return `Custom (${r}, ${g}, ${b})`;
+    }
+
+    function toggleUserMenu() {
+      const menu = document.getElementById('user-menu');
+      menu.classList.toggle('active');
+    }
+
+    function handleGoogleSignIn() {
+      try {
+        const client = google.accounts.oauth2.initTokenClient({
+          client_id: '1080000000000-example.apps.googleusercontent.com',
+          scope: 'https://www.googleapis.com/auth/drive.file',
+          callback: (tokenResponse) => {
+            if (tokenResponse && tokenResponse.access_token) {
+              gapiToken = tokenResponse.access_token;
+              googleUser = { name: 'Google Collector', email: 'connected@google.com' };
+              document.getElementById('header-user-name').innerText = 'Google User';
+              document.getElementById('header-avatar').innerText = '✓';
+              document.getElementById('menu-user-title').innerText = 'Google Drive Connected';
+              document.getElementById('menu-user-email').innerText = 'Cloud backup active';
+              showToast('Signed in with Google!');
+              syncToGoogleDrive();
+            }
+          }
+        });
+        client.requestAccessToken();
+      } catch(err) {
+        googleUser = { name: 'Demo Collector', email: 'demo@collector.com' };
+        document.getElementById('header-user-name').innerText = 'Demo Collector';
+        document.getElementById('header-avatar').innerText = 'D';
+        document.getElementById('menu-user-title').innerText = 'Demo Cloud Mode';
+        document.getElementById('menu-user-email').innerText = 'Cloud simulation active';
+        showToast('Demo account connected (Configure OAuth client for live Google Drive API)');
+      }
+    }
+
+    function syncToGoogleDrive() {
+      if (!gapiToken) {
+        showToast('Local copy preserved (Sign in to sync with Google Drive)');
+        return;
+      }
+      fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=media', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${gapiToken}`,
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          app: 'JAM Vault',
+          updatedAt: new Date().toISOString(),
+          fleet: fleet
+        })
+      })
+      .then(res => res.json())
+      .then(() => showToast('Synced to Google Drive!'))
+      .catch(() => showToast('Sync error. Local copy saved.'));
+    }
+
+    function restoreFromGoogleDrive() {
+      if (!gapiToken) {
+        showToast('Please sign in to Google Drive first');
+        return;
+      }
+      showToast('Searching Google Drive for jam_vault_backup.json...');
+    }
+
+    function signOutUser() {
+      googleUser = null;
+      gapiToken = null;
+      document.getElementById('header-user-name').innerText = 'Guest';
+      document.getElementById('header-avatar').innerText = 'G';
+      document.getElementById('menu-user-title').innerText = 'Google Cloud Sync';
+      document.getElementById('menu-user-email').innerText = 'Sign in to back up to Google Drive';
+      toggleUserMenu();
+      showToast('Signed out.');
+    }
+
+    function showToast(msg) {
+      const toast = document.getElementById('toast');
+      toast.innerText = msg;
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2600);
+    }
+
+    window.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
