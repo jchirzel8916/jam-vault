@@ -593,7 +593,7 @@
       border: 1px solid var(--card-border);
       border-radius: 12px;
       padding: 14px;
-      width: 260px;
+      width: 270px;
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
       display: none;
       z-index: 60;
@@ -634,7 +634,7 @@
     <button class="btn-cam-action" style="width: 100%; margin-bottom: 8px;" id="btn-google-auth" onclick="handleGoogleSignIn()">
       🔑 Sign In with Google
     </button>
-    <button class="btn-cam-action" style="width: 100%; margin-bottom: 8px;" onclick="syncToGoogleDrive()">
+    <button class="btn-cam-action" style="width: 100%; margin-bottom: 8px;" onclick="syncToGoogleDrive(true)">
       ☁️ Backup to Google Drive
     </button>
     <button class="btn-cam-action" style="width: 100%; margin-bottom: 8px;" onclick="restoreFromGoogleDrive()">
@@ -817,6 +817,9 @@
 
   <script>
     const STORAGE_KEY = 'jam_vault_collection_v2';
+    const GOOGLE_CLIENT_ID = '725227247202-vii3snss175j5v6ql1i54ulrg8jd5nuf.apps.googleusercontent.com';
+    const BACKUP_FILENAME = 'jam_vault_backup.json';
+
     let fleet = [];
     let pendingImageData = null;
     let pendingDeleteId = null;
@@ -824,6 +827,7 @@
 
     let googleUser = null;
     let gapiToken = null;
+    let driveFileId = null;
 
     const DEFAULT_FLEET = [
       {
@@ -1067,8 +1071,8 @@
       closeModal();
       showToast('Truck saved in JAM Vault!');
 
-      if (googleUser) {
-        syncToGoogleDrive();
+      if (gapiToken) {
+        syncToGoogleDrive(false);
       }
     }
 
@@ -1094,8 +1098,8 @@
       closeDeleteModal();
       showToast('Record removed.');
 
-      if (googleUser) {
-        syncToGoogleDrive();
+      if (gapiToken) {
+        syncToGoogleDrive(false);
       }
     };
 
@@ -1203,67 +1207,173 @@
     }
 
     function handleGoogleSignIn() {
+      if (!window.google || !google.accounts || !google.accounts.oauth2) {
+        showToast('Google library loading, please try again in a moment...');
+        return;
+      }
+
       try {
         const client = google.accounts.oauth2.initTokenClient({
-          client_id: '1080000000000-example.apps.googleusercontent.com',
-          scope: 'https://www.googleapis.com/auth/drive.file',
-          callback: (tokenResponse) => {
+          client_id: GOOGLE_CLIENT_ID,
+          scope: 'https://www.googleapis.com/auth/drive.file https://www.googleapis.com/auth/userinfo.profile https://www.googleapis.com/auth/userinfo.email',
+          callback: async (tokenResponse) => {
             if (tokenResponse && tokenResponse.access_token) {
               gapiToken = tokenResponse.access_token;
-              googleUser = { name: 'Google Collector', email: 'connected@google.com' };
-              document.getElementById('header-user-name').innerText = 'Google User';
-              document.getElementById('header-avatar').innerText = '✓';
-              document.getElementById('menu-user-title').innerText = 'Google Drive Connected';
-              document.getElementById('menu-user-email').innerText = 'Cloud backup active';
+              
+              try {
+                const userRes = await fetch('https://www.googleapis.com/oauth2/v3/userinfo', {
+                  headers: { 'Authorization': `Bearer ${gapiToken}` }
+                });
+                googleUser = await userRes.json();
+                
+                document.getElementById('header-user-name').innerText = googleUser.given_name || 'Collector';
+                if (googleUser.picture) {
+                  document.getElementById('header-avatar').innerHTML = `<img src="${googleUser.picture}" alt="Avatar">`;
+                } else {
+                  document.getElementById('header-avatar').innerText = (googleUser.name || 'G')[0];
+                }
+                document.getElementById('menu-user-title').innerText = googleUser.name || 'Google Collector';
+                document.getElementById('menu-user-email').innerText = googleUser.email || 'Cloud backup connected';
+              } catch (e) {
+                document.getElementById('header-user-name').innerText = 'Connected';
+                document.getElementById('menu-user-title').innerText = 'Google Drive Connected';
+              }
+
               showToast('Signed in with Google!');
-              syncToGoogleDrive();
+              await findOrCreateDriveFile();
             }
           }
         });
         client.requestAccessToken();
       } catch(err) {
-        googleUser = { name: 'Demo Collector', email: 'demo@collector.com' };
-        document.getElementById('header-user-name').innerText = 'Demo Collector';
-        document.getElementById('header-avatar').innerText = 'D';
-        document.getElementById('menu-user-title').innerText = 'Demo Cloud Mode';
-        document.getElementById('menu-user-email').innerText = 'Cloud simulation active';
-        showToast('Demo account connected (Configure OAuth client for live Google Drive API)');
+        console.error(err);
+        showToast('Sign-in error. Check console.');
       }
     }
 
-    function syncToGoogleDrive() {
+    async function findOrCreateDriveFile() {
+      if (!gapiToken) return;
+      try {
+        const query = encodeURIComponent(`name = '${BACKUP_FILENAME}' and trashed = false`);
+        const searchRes = await fetch(`https://www.googleapis.com/drive/v3/files?q=${query}&fields=files(id,name)`, {
+          headers: { 'Authorization': `Bearer ${gapiToken}` }
+        });
+        const data = await searchRes.json();
+        if (data.files && data.files.length > 0) {
+          driveFileId = data.files[0].id;
+        } else {
+          driveFileId = null;
+        }
+      } catch (err) {
+        console.error('Error finding drive file:', err);
+      }
+    }
+
+    async function syncToGoogleDrive(isManual = false) {
       if (!gapiToken) {
-        showToast('Local copy preserved (Sign in to sync with Google Drive)');
+        showToast('Sign in with Google first to backup');
         return;
       }
-      fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=media', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${gapiToken}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
+
+      if (isManual) showToast('Syncing to Google Drive...');
+
+      try {
+        if (!driveFileId) {
+          await findOrCreateDriveFile();
+        }
+
+        const payload = JSON.stringify({
           app: 'JAM Vault',
+          version: '2.0',
           updatedAt: new Date().toISOString(),
           fleet: fleet
-        })
-      })
-      .then(res => res.json())
-      .then(() => showToast('Synced to Google Drive!'))
-      .catch(() => showToast('Sync error. Local copy saved.'));
+        });
+
+        if (driveFileId) {
+          // Update existing file
+          await fetch(`https://www.googleapis.com/upload/drive/v3/files/${driveFileId}?uploadType=media`, {
+            method: 'PATCH',
+            headers: {
+              'Authorization': `Bearer ${gapiToken}`,
+              'Content-Type': 'application/json'
+            },
+            body: payload
+          });
+        } else {
+          // Create new file with multipart metadata
+          const metadata = {
+            name: BACKUP_FILENAME,
+            mimeType: 'application/json'
+          };
+          const boundary = 'foo_bar_baz';
+          const delimiter = `\r\n--${boundary}\r\n`;
+          const closeDelim = `\r\n--${boundary}--`;
+
+          const multipartBody =
+            delimiter +
+            'Content-Type: application/json; charset=UTF-8\r\n\r\n' +
+            JSON.stringify(metadata) +
+            delimiter +
+            'Content-Type: application/json\r\n\r\n' +
+            payload +
+            closeDelim;
+
+          const createRes = await fetch('https://www.googleapis.com/upload/drive/v3/files?uploadType=multipart', {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${gapiToken}`,
+              'Content-Type': `multipart/related; boundary=${boundary}`
+            },
+            body: multipartBody
+          });
+          const createdData = await createRes.json();
+          driveFileId = createdData.id;
+        }
+
+        if (isManual) showToast('Backed up to Google Drive!');
+      } catch (err) {
+        console.error('Backup error:', err);
+        showToast('Backup failed. Local copy is safe.');
+      }
     }
 
-    function restoreFromGoogleDrive() {
+    async function restoreFromGoogleDrive() {
       if (!gapiToken) {
-        showToast('Please sign in to Google Drive first');
+        showToast('Sign in with Google first');
         return;
       }
-      showToast('Searching Google Drive for jam_vault_backup.json...');
+
+      showToast('Searching Google Drive...');
+      try {
+        await findOrCreateDriveFile();
+        if (!driveFileId) {
+          showToast('No backup file found in your Google Drive yet');
+          return;
+        }
+
+        const res = await fetch(`https://www.googleapis.com/drive/v3/files/${driveFileId}?alt=media`, {
+          headers: { 'Authorization': `Bearer ${gapiToken}` }
+        });
+        const backupData = await res.json();
+
+        if (backupData && Array.isArray(backupData.fleet)) {
+          fleet = backupData.fleet;
+          saveToLocalStorage();
+          renderFleet();
+          showToast(`Restored ${fleet.length} trucks from Google Drive!`);
+        } else {
+          showToast('Backup file was empty or corrupted');
+        }
+      } catch (err) {
+        console.error('Restore error:', err);
+        showToast('Error restoring from Google Drive');
+      }
     }
 
     function signOutUser() {
       googleUser = null;
       gapiToken = null;
+      driveFileId = null;
       document.getElementById('header-user-name').innerText = 'Guest';
       document.getElementById('header-avatar').innerText = 'G';
       document.getElementById('menu-user-title').innerText = 'Google Cloud Sync';
