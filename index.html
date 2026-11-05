@@ -7,7 +7,7 @@
   <link rel="icon" type="image/jpeg" href="logo.jpg">
   <link rel="apple-touch-icon" href="logo.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Google Identity Services -->
@@ -677,6 +677,17 @@
       background: rgba(245, 158, 11, 0.1);
     }
 
+    .btn-delete-garage {
+      background: rgba(239, 68, 68, 0.15);
+      border: 1px solid rgba(239, 68, 68, 0.3);
+      color: #ef4444;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      cursor: pointer;
+      margin-left: 8px;
+    }
+
     .user-menu {
       position: absolute;
       top: 60px;
@@ -881,6 +892,21 @@
     </div>
   </div>
 
+  <!-- DELETE GARAGE CONFIRMATION MODAL -->
+  <div class="modal-backdrop" id="delete-garage-modal">
+    <div class="modal-box" style="max-width: 400px; text-align: center;">
+      <div style="font-size: 2.2rem; margin-bottom: 8px;">🏢🗑️</div>
+      <h3 style="margin-bottom: 6px;">Delete Garage?</h3>
+      <p style="font-size: 0.82rem; color: var(--text-muted); margin-bottom: 18px;" id="delete-garage-desc">
+        Are you sure you want to delete this garage and all trucks inside it?
+      </p>
+      <div style="display: flex; gap: 8px; justify-content: center;">
+        <button class="btn-cam-action" onclick="closeDeleteGarageModal()">Cancel</button>
+        <button class="btn-save" style="background: var(--accent-danger); color: #fff;" onclick="confirmDeleteGarage()">Delete Garage</button>
+      </div>
+    </div>
+  </div>
+
   <!-- EDIT GARAGE NAME MODAL -->
   <div class="modal-backdrop" id="edit-garage-name-modal">
     <div class="modal-box" style="max-width: 400px;">
@@ -961,6 +987,12 @@
 
       <form id="truck-form" onsubmit="event.preventDefault(); saveTruckRecord();">
         <input type="hidden" id="edit-truck-id">
+
+        <!-- MOVE GARAGE FIELD (Visible when editing and >= 2 garages exist) -->
+        <div class="form-group" id="move-garage-wrap" style="display: none;">
+          <label class="form-label">📍 Garage Location</label>
+          <select class="form-control" id="input-truck-garage" style="border-color: rgba(245, 158, 11, 0.4);"></select>
+        </div>
 
         <!-- TRUCK MODEL -->
         <div class="form-group">
@@ -1245,6 +1277,7 @@
 
     let pendingImageData = null;
     let pendingDeleteId = null;
+    let pendingDeleteGarageId = null;
     let activePickerComponent = null;
     let googleUser = null;
     let gapiToken = null;
@@ -1431,15 +1464,23 @@
     // --- GARAGE MODAL & SWITCHING ---
     function openGarageModal() {
       const list = document.getElementById('garage-items-list');
-      list.innerHTML = vaultsState.garages.map(g => `
-        <div class="garage-list-item ${g.id === vaultsState.activeGarageId ? 'active' : ''}" onclick="selectGarage('${g.id}')">
-          <div>
-            <div style="font-weight: 700; font-size: 0.9rem;">${escapeHtml(g.name)}</div>
-            <div style="font-size: 0.75rem; color: var(--text-muted);">${g.trucks.length} Monster Trucks</div>
+      const canDelete = vaultsState.garages.length > 1;
+
+      list.innerHTML = vaultsState.garages.map(g => {
+        const isCurrent = g.id === vaultsState.activeGarageId;
+        return `
+          <div class="garage-list-item ${isCurrent ? 'active' : ''}">
+            <div onclick="selectGarage('${g.id}')" style="flex: 1; cursor: pointer;">
+              <div style="font-weight: 700; font-size: 0.9rem;">${escapeHtml(g.name)}</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">${g.trucks.length} Monster Trucks</div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+              <span onclick="selectGarage('${g.id}')" style="cursor: pointer;">${isCurrent ? '✅ Active' : 'Switch'}</span>
+              ${canDelete ? `<button class="btn-delete-garage" title="Delete Garage" onclick="event.stopPropagation(); promptDeleteGarage('${g.id}')">🗑️</button>` : ''}
+            </div>
           </div>
-          <div>${g.id === vaultsState.activeGarageId ? '✅' : '👉'}</div>
-        </div>
-      `).join('');
+        `;
+      }).join('');
 
       document.getElementById('garage-modal').classList.add('active');
     }
@@ -1474,6 +1515,44 @@
       refreshUI();
       closeGarageModal();
       showToast(`Created & switched to "${name}"!`);
+      if (gapiToken) syncToGoogleDrive(false);
+    }
+
+    function promptDeleteGarage(garageId) {
+      if (vaultsState.garages.length <= 1) {
+        showToast("You cannot delete your only garage.");
+        return;
+      }
+      const g = vaultsState.garages.find(x => x.id === garageId);
+      if (!g) return;
+
+      pendingDeleteGarageId = garageId;
+      document.getElementById('delete-garage-desc').innerText = 
+        `Are you sure you want to delete "${g.name}" along with all ${g.trucks.length} trucks inside it? This cannot be undone.`;
+      document.getElementById('delete-garage-modal').classList.add('active');
+    }
+
+    function closeDeleteGarageModal() {
+      document.getElementById('delete-garage-modal').classList.remove('active');
+      pendingDeleteGarageId = null;
+    }
+
+    function confirmDeleteGarage() {
+      if (!pendingDeleteGarageId) return;
+
+      const toDelete = pendingDeleteGarageId;
+      vaultsState.garages = vaultsState.garages.filter(g => g.id !== toDelete);
+
+      // If deleted garage was the active one, fallback to first garage
+      if (vaultsState.activeGarageId === toDelete) {
+        vaultsState.activeGarageId = vaultsState.garages[0].id;
+      }
+
+      saveState();
+      closeDeleteGarageModal();
+      openGarageModal(); // Refresh the list
+      refreshUI();
+      showToast("Garage deleted.");
       if (gapiToken) syncToGoogleDrive(false);
     }
 
@@ -1539,7 +1618,7 @@
       document.getElementById('leaderboard-modal').classList.remove('active');
     }
 
-    // --- TRUCK CRUD & CUSTOM FIELDS ---
+    // --- TRUCK CRUD, MOVING & CUSTOM FIELDS ---
     function toggleCustomColorInput(component, value) {
       const wrap = document.getElementById(`custom-${component}-wrap`);
       if (wrap) {
@@ -1558,6 +1637,7 @@
       
       document.getElementById('input-model').value = 'Grave Digger';
       document.getElementById('custom-name-wrap').style.display = 'none';
+      document.getElementById('move-garage-wrap').style.display = 'none';
 
       ['body', 'chassis', 'rim', 'tire'].forEach(c => {
         document.getElementById(`custom-${c}-wrap`).style.display = 'none';
@@ -1575,6 +1655,18 @@
 
       document.getElementById('edit-truck-id').value = item.id;
       document.getElementById('modal-heading').innerText = 'Edit Truck Spec';
+
+      // Move Garage Dropdown Setup
+      const moveWrap = document.getElementById('move-garage-wrap');
+      const garageSelect = document.getElementById('input-truck-garage');
+      if (vaultsState.garages.length > 1) {
+        moveWrap.style.display = 'block';
+        garageSelect.innerHTML = vaultsState.garages.map(g => `
+          <option value="${g.id}" ${g.id === activeGarage.id ? 'selected' : ''}>${escapeHtml(g.name)} ${g.id === activeGarage.id ? '(Current)' : ''}</option>
+        `).join('');
+      } else {
+        moveWrap.style.display = 'none';
+      }
 
       // Set Model
       const modelSelect = document.getElementById('input-model');
@@ -1660,16 +1752,33 @@
       };
 
       const activeGarage = getActiveGarage();
+
       if (editId) {
-        activeGarage.trucks = activeGarage.trucks.map(t => t.id === editId ? truckData : t);
+        const targetGarageId = (vaultsState.garages.length > 1) 
+          ? (document.getElementById('input-truck-garage').value || activeGarage.id) 
+          : activeGarage.id;
+
+        if (targetGarageId !== activeGarage.id) {
+          // Transfer to the selected destination garage
+          activeGarage.trucks = activeGarage.trucks.filter(t => t.id !== editId);
+          const destination = vaultsState.garages.find(g => g.id === targetGarageId);
+          if (destination) {
+            destination.trucks.unshift(truckData);
+            showToast(`Moved truck to ${destination.name}!`);
+          }
+        } else {
+          // Update in-place
+          activeGarage.trucks = activeGarage.trucks.map(t => t.id === editId ? truckData : t);
+          showToast('Truck updated in JAM Vault!');
+        }
       } else {
         activeGarage.trucks.unshift(truckData);
+        showToast('Truck saved in JAM Vault!');
       }
 
       saveState();
       refreshUI();
       closeTruckModal();
-      showToast('Truck saved in JAM Vault!');
       if (gapiToken) syncToGoogleDrive(false);
     }
 
