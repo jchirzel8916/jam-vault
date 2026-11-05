@@ -89,10 +89,15 @@
     }
 
     .brand-logo-img {
-      height: 72px;
-      width: auto;
+      height: 44px !important;
+      max-height: 44px !important;
+      width: auto !important;
+      max-width: 140px !important;
+      object-fit: contain;
+      display: block;
       filter: drop-shadow(0 2px 8px var(--accent-yellow-glow));
     }
+
 
     .brand-title {
       font-family: 'Outfit', sans-serif;
@@ -788,7 +793,7 @@
   <header>
     <div class="header-container">
       <div class="brand-wrap" onclick="location.reload()">
-        <img class="brand-logo-img" src="logo.png" alt="JAM Vault Logo">
+        <img class="brand-logo-img" src="logo.png" alt="JAM Vault Logo" height="42" style="height: 42px !important; max-height: 42px !important; width: auto !important; max-width: 140px !important; display: block;">
         <div class="brand-title">
           JAM VAULT <span class="badge-pro">PRO</span>
         </div>
