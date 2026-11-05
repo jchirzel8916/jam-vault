@@ -38,6 +38,11 @@
       -webkit-tap-highlight-color: transparent;
     }
 
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
     body {
       background-color: var(--bg-dark);
       background-image: 
@@ -55,9 +60,10 @@
       top: 0;
       z-index: 50;
       backdrop-filter: blur(16px);
-      background: rgba(10, 12, 16, 0.9);
+      background: rgba(10, 12, 16, 0.95);
       border-bottom: 1px solid var(--card-border);
-      padding: 12px 18px;
+      padding: 8px 12px;
+      width: 100%;
     }
 
     .header-container {
@@ -66,25 +72,26 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
+      gap: 8px;
+      flex-wrap: wrap;
     }
 
     .brand-wrap {
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
       cursor: pointer;
     }
 
     .brand-logo-img {
-      height: 42px;
+      height: 36px;
       width: auto;
       filter: drop-shadow(0 2px 8px var(--accent-yellow-glow));
     }
 
     .brand-title {
       font-family: 'Outfit', sans-serif;
-      font-size: 1.3rem;
+      font-size: 1.15rem;
       font-weight: 900;
       letter-spacing: 0.5px;
       color: #fff;
@@ -105,7 +112,9 @@
     .header-actions {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 6px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
     }
 
     .garage-selector-btn {
@@ -113,13 +122,19 @@
       border: 1px solid rgba(245, 158, 11, 0.3);
       color: var(--accent-yellow);
       font-weight: 700;
-      font-size: 0.8rem;
-      padding: 7px 12px;
+      font-size: 0.75rem;
+      padding: 6px 10px;
       border-radius: 20px;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 5px;
       cursor: pointer;
+      max-width: 130px;
+    }
+
+    .garage-selector-btn span {
+      overflow: hidden;
+      text-overflow: ellipsis;
       white-space: nowrap;
     }
 
@@ -127,14 +142,14 @@
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid var(--card-border);
       color: #fff;
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       font-weight: 700;
-      padding: 7px 12px;
+      padding: 6px 10px;
       border-radius: 20px;
       cursor: pointer;
       display: flex;
       align-items: center;
-      gap: 5px;
+      gap: 4px;
     }
 
     .btn-add-primary {
@@ -142,37 +157,39 @@
       color: #000;
       border: none;
       font-weight: 800;
-      font-size: 0.82rem;
-      padding: 8px 14px;
+      font-size: 0.75rem;
+      padding: 6px 12px;
       border-radius: 20px;
       display: flex;
       align-items: center;
       gap: 4px;
       cursor: pointer;
       box-shadow: 0 4px 14px var(--accent-yellow-glow);
+      white-space: nowrap;
     }
 
     .user-pill {
       background: rgba(255, 255, 255, 0.06);
       border: 1px solid var(--card-border);
-      padding: 5px 10px;
+      padding: 4px 8px;
       border-radius: 30px;
       display: flex;
       align-items: center;
-      gap: 6px;
-      font-size: 0.8rem;
+      gap: 5px;
+      font-size: 0.75rem;
       cursor: pointer;
+      white-space: nowrap;
     }
 
     .user-avatar {
-      width: 24px;
-      height: 24px;
+      width: 22px;
+      height: 22px;
       border-radius: 50%;
       background: #374151;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: bold;
       overflow: hidden;
     }
@@ -282,6 +299,7 @@
       color: #d1d5db;
       font-size: 0.8rem;
       outline: none;
+      max-width: 180px;
     }
 
     .truck-grid {
@@ -360,15 +378,15 @@
 
     .color-chips-row {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 6px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 4px;
       margin-bottom: 14px;
     }
 
     .color-chip {
       background: rgba(255, 255, 255, 0.04);
       border: 1px solid rgba(255, 255, 255, 0.06);
-      padding: 5px 6px;
+      padding: 5px 4px;
       border-radius: 6px;
       display: flex;
       flex-direction: column;
@@ -376,14 +394,14 @@
     }
 
     .color-chip-label {
-      font-size: 0.62rem;
+      font-size: 0.58rem;
       color: var(--text-muted);
       text-transform: uppercase;
       font-weight: 700;
     }
 
     .color-chip-val {
-      font-size: 0.72rem;
+      font-size: 0.68rem;
       font-weight: 600;
       color: #fff;
       display: flex;
@@ -452,7 +470,7 @@
       border: 1px solid var(--card-border);
       border-radius: 20px;
       width: 100%;
-      max-width: 560px;
+      max-width: 580px;
       max-height: 90vh;
       overflow-y: auto;
       padding: 22px;
@@ -662,12 +680,12 @@
     .user-menu {
       position: absolute;
       top: 60px;
-      right: 18px;
+      right: 12px;
       background: #161b26;
       border: 1px solid var(--card-border);
       border-radius: 12px;
       padding: 14px;
-      width: 270px;
+      width: min(290px, 90vw);
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.7);
       display: none;
       z-index: 60;
@@ -713,6 +731,40 @@
       color: var(--text-muted);
       text-decoration: underline;
     }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 8px 10px;
+      }
+      .brand-title {
+        font-size: 1.05rem;
+      }
+      .header-container {
+        justify-content: space-between;
+      }
+      .header-actions {
+        width: 100%;
+        justify-content: space-between;
+        margin-top: 6px;
+      }
+      .garage-hero {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+      }
+      .filter-panel {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .filter-selects {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .filter-select {
+        max-width: 100%;
+      }
+    }
   </style>
 </head>
 <body>
@@ -732,7 +784,7 @@
         </button>
 
         <button class="btn-leaderboard" onclick="openLeaderboardModal()">
-          🏆 <span style="display: none; @media(min-width:500px){display:inline;}">Board</span>
+          🏆 <span>Board</span>
         </button>
 
         <button class="btn-add-primary" onclick="openAddTruckModal()">
@@ -781,7 +833,7 @@
     <section class="filter-panel">
       <div class="search-input-wrap">
         <span class="search-icon">🔍</span>
-        <input type="text" id="search-query" placeholder="Search Grave Digger, Megalodon, Max-D..." oninput="applyFilters()">
+        <input type="text" id="search-query" placeholder="Search Grave Digger, Megalodon, Max-D, Chassis, Rims..." oninput="applyFilters()">
       </div>
 
       <div class="filter-selects">
@@ -795,24 +847,10 @@
 
         <select class="filter-select" id="filter-chassis" onchange="applyFilters()">
           <option value="">Chassis: All</option>
-          <option value="Green">Green</option>
-          <option value="Purple">Purple</option>
-          <option value="Black">Black</option>
-          <option value="Silver / Chrome">Silver / Chrome</option>
-          <option value="Neon">Neon</option>
-          <option value="Blue">Blue</option>
-          <option value="Red">Red</option>
         </select>
 
         <select class="filter-select" id="filter-rim" onchange="applyFilters()">
           <option value="">Rims: All</option>
-          <option value="Green">Green</option>
-          <option value="Purple">Purple</option>
-          <option value="Chrome">Chrome</option>
-          <option value="Black">Black</option>
-          <option value="Neon">Neon</option>
-          <option value="Blue">Blue</option>
-          <option value="Red">Red</option>
         </select>
       </div>
     </section>
@@ -911,8 +949,9 @@
 
         <div class="preview-canvas-wrap" id="canvas-wrapper">
           <canvas id="image-canvas"></canvas>
-          <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 4px;">Tap a button, then tap the photo to sample color:</div>
+          <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 4px;">Tap a button, then tap the photo to sample closest production color:</div>
           <div class="eyedropper-bar">
+            <button type="button" class="btn-pick" id="btn-pick-body" onclick="activateColorPicker('body')">Pick Body</button>
             <button type="button" class="btn-pick" id="btn-pick-chassis" onclick="activateColorPicker('chassis')">Pick Chassis</button>
             <button type="button" class="btn-pick" id="btn-pick-rim" onclick="activateColorPicker('rim')">Pick Rim</button>
             <button type="button" class="btn-pick" id="btn-pick-tire" onclick="activateColorPicker('tire')">Pick Tire</button>
@@ -923,20 +962,10 @@
       <form id="truck-form" onsubmit="event.preventDefault(); saveTruckRecord();">
         <input type="hidden" id="edit-truck-id">
 
+        <!-- TRUCK MODEL -->
         <div class="form-group">
           <label class="form-label">Truck Model</label>
-          <select class="form-control" id="input-model" onchange="checkCustomModel(this.value)">
-            <option value="Grave Digger">Grave Digger</option>
-            <option value="Megalodon">Megalodon</option>
-            <option value="Max-D">Max-D</option>
-            <option value="El Toro Loco">El Toro Loco</option>
-            <option value="Monster Mutt">Monster Mutt</option>
-            <option value="Earth Shaker">Earth Shaker</option>
-            <option value="Zombie">Zombie</option>
-            <option value="Sparkle Smash">Sparkle Smash</option>
-            <option value="Tech Deck Wreck Deck">Tech Deck Wreck Deck</option>
-            <option value="CUSTOM">+ Other / Custom (Type Below)</option>
-          </select>
+          <select class="form-control" id="input-model" onchange="checkCustomModel(this.value)"></select>
         </div>
 
         <div class="form-group" id="custom-name-wrap" style="display: none;">
@@ -960,26 +989,57 @@
           </div>
         </div>
 
+        <!-- BODY & CHASSIS COLOR -->
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label">Chassis Color</label>
-            <input type="text" class="form-control" id="input-chassis" placeholder="Green, Black, Chrome, etc.">
+            <label class="form-label">Body Color</label>
+            <select class="form-control" id="input-body" onchange="toggleCustomColorInput('body', this.value)"></select>
           </div>
           <div class="form-group">
-            <label class="form-label">Rim Color</label>
-            <input type="text" class="form-control" id="input-rim" placeholder="Purple, Chrome, Neon, etc.">
+            <label class="form-label">Chassis Color</label>
+            <select class="form-control" id="input-chassis" onchange="toggleCustomColorInput('chassis', this.value)"></select>
           </div>
         </div>
 
+        <!-- CUSTOM BODY & CHASSIS INPUTS (HIDDEN BY DEFAULT) -->
+        <div class="form-row">
+          <div class="form-group" id="custom-body-wrap" style="display: none;">
+            <label class="form-label">Custom Body Color</label>
+            <input type="text" class="form-control" id="input-custom-body" placeholder="Describe body color...">
+          </div>
+          <div class="form-group" id="custom-chassis-wrap" style="display: none;">
+            <label class="form-label">Custom Chassis Color</label>
+            <input type="text" class="form-control" id="input-custom-chassis" placeholder="Describe chassis color...">
+          </div>
+        </div>
+
+        <!-- RIM & TIRE COLORS -->
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label">Tire Compound / Color</label>
-            <input type="text" class="form-control" id="input-tire" placeholder="Black BKT, Mud, Glow, etc.">
+            <label class="form-label">Rim Color</label>
+            <select class="form-control" id="input-rim" onchange="toggleCustomColorInput('rim', this.value)"></select>
           </div>
           <div class="form-group">
-            <label class="form-label">Variation / Edition</label>
-            <input type="text" class="form-control" id="input-variation" placeholder="Fire & Ice, 30th Chrome, etc.">
+            <label class="form-label">Tire Compound / Color</label>
+            <select class="form-control" id="input-tire" onchange="toggleCustomColorInput('tire', this.value)"></select>
           </div>
+        </div>
+
+        <!-- CUSTOM RIM & TIRE INPUTS (HIDDEN BY DEFAULT) -->
+        <div class="form-row">
+          <div class="form-group" id="custom-rim-wrap" style="display: none;">
+            <label class="form-label">Custom Rim Color</label>
+            <input type="text" class="form-control" id="input-custom-rim" placeholder="Describe rim color...">
+          </div>
+          <div class="form-group" id="custom-tire-wrap" style="display: none;">
+            <label class="form-label">Custom Tire Color</label>
+            <input type="text" class="form-control" id="input-custom-tire" placeholder="Describe tire color...">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Variation / Edition</label>
+          <input type="text" class="form-control" id="input-variation" placeholder="Fire & Ice, 30th Chrome, Ride Truck, etc.">
         </div>
 
         <div class="form-actions">
@@ -1020,6 +1080,121 @@
     const GOOGLE_CLIENT_ID = '725227247202-vii3snss175j5v6ql1i54ulrg8jd5nuf.apps.googleusercontent.com';
     const BACKUP_FILENAME = 'jam_vault_backup.json';
 
+    // 50 MASTER TRUCK NAMES
+    const MASTER_TRUCK_NAMES = [
+      "Grave Digger", "Max-D (Maximum Destruction)", "Megalodon", "El Toro Loco", "Monster Mutt",
+      "Monster Mutt Dalmatian", "Monster Mutt Rottweiler", "Zombie", "Earth Shaker", "Son-Uva Digger",
+      "Bakugan Dragonoid", "Sparkle Smash", "ThunderROARus", "JCB DIGatron", "Blue Thunder",
+      "Lucas Stabilizer", "Alien Invasion", "Pirate's Curse", "Classroom Crusher", "Dragon",
+      "Soldier Fortune", "Soldier Fortune Black Ops", "Northern Nightmare", "Avenger", "Bounty Hunter",
+      "Scarlet Bandit", "Mohawk Warrior", "Captain's Curse", "Crushstation", "Higher Education",
+      "BroDozer", "Jester", "Kraken", "Shocker", "Iron Outlaw", "Velociraptor", "Horse Power",
+      "Tempest Steed", "Mayhem", "Octon8er", "Terminal Velocity", "Wild Side", "Calavera",
+      "Backwards Bob", "Bad Company", "Lucas Oil Crusader", "Team Hot Wheels Firestorm",
+      "Metal Mulisha", "Batman / DC Super Heroes", "Spider-Man / Marvel Series"
+    ];
+
+    // MASTER PRODUCTION PALETTES & COLOR REFERENCE MAPS
+    const BODY_PALETTE = {
+      "Gloss Black": [15, 15, 15],
+      "Matte / Flat Black": [35, 35, 35],
+      "Chrome Silver / Metallic Silver": [210, 215, 220],
+      "Gunmetal Grey / Dark Grey": [90, 95, 100],
+      "Slate Grey": [112, 128, 144],
+      "Pearl White": [245, 245, 250],
+      "Ghost Translucent White": [220, 230, 240],
+      "Safety Orange": [255, 95, 0],
+      "Bright Yellow / School Bus Yellow": [255, 215, 0],
+      "Lime Green / Toxic Green": [50, 205, 50],
+      "Emerald Green / Forest Green": [34, 139, 34],
+      "Royal Blue / Metallic Navy Blue": [25, 65, 165],
+      "Glacier Blue / Ice Blue": [120, 195, 240],
+      "Teal / Aqua Shark Blue": [0, 168, 180],
+      "Candy Apple Red": [220, 20, 40],
+      "Blood Red / Crimson": [150, 10, 25],
+      "Burgundy / Maroon": [110, 20, 40],
+      "Pastel Pink / Hot Pink": [255, 105, 180],
+      "Metallic Purple / Violet": [130, 45, 160],
+      "Olive Green / Desert Camo Tan": [107, 120, 60],
+      "Chestnut Brown / Dog Brown": [125, 65, 30],
+      "Gold Chrome / Yellow Flake": [220, 180, 50]
+    };
+
+    const CHASSIS_PALETTE = {
+      "Gloss Black": [15, 15, 15],
+      "Matte / Satin Black": [40, 40, 40],
+      "Neon Green / Fluorescent Lime": [57, 255, 20],
+      "Metallic Silver / Grey": [190, 195, 200],
+      "Metallic Purple / Dark Violet": [110, 40, 140],
+      "Electric Violet / Magenta": [190, 25, 170],
+      "Blood Red / Dark Red": [140, 15, 20],
+      "Gloss Red / Candy Red": [225, 25, 35],
+      "Construction Yellow / Safety Yellow": [255, 210, 0],
+      "Olive Drab / Military Green": [85, 95, 50],
+      "Glacier Blue / Sky Blue": [110, 190, 235],
+      "Navy Blue / Midnight Blue": [20, 35, 75],
+      "Deep Ocean Blue / Royal Blue": [25, 70, 175],
+      "Tan / Desert Khaki": [195, 165, 120],
+      "Light Brown": [165, 115, 75],
+      "Deep Chestnut Brown": [100, 50, 25],
+      "White / Off-White": [240, 240, 235],
+      "Ghost White / Light Grey": [215, 220, 225],
+      "Charcoal / Dark Grey": [70, 75, 80],
+      "Clear Translucent (Special Edition)": [200, 225, 245],
+      "Gold Chrome / Metallic Yellow": [225, 185, 45],
+      "Bronze / Copper": [180, 110, 60]
+    };
+
+    const RIM_PALETTE = {
+      "Chrome Silver": [225, 230, 235],
+      "Lime Green / Neon Green": [55, 240, 40],
+      "Fluorescent Green": [80, 255, 80],
+      "Chrome Gold / Metallic Gold": [225, 185, 40],
+      "Safety Orange": [255, 100, 0],
+      "Royal Blue": [30, 80, 190],
+      "Metallic Blue": [50, 115, 200],
+      "Cyan / Sparkle Teal": [0, 210, 220],
+      "Yellow / Gold": [255, 215, 0],
+      "Blood Red / Dark Red": [145, 15, 25],
+      "Candy Apple Red": [225, 25, 45],
+      "Matte Black / Satin Black": [40, 40, 40],
+      "Gloss Black": [15, 15, 15],
+      "Tan / Beige / Sand": [210, 185, 140],
+      "White / Pearl White": [245, 245, 245],
+      "Silver / Brushed Aluminum": [185, 190, 195],
+      "Dark Orange / Flame Orange": [225, 75, 0],
+      "Olive Green": [95, 110, 55],
+      "Glacier Blue": [130, 200, 240],
+      "Midnight Purple": [75, 25, 105],
+      "Gunmetal Grey": [85, 90, 95],
+      "Rose Gold / Copper": [195, 120, 110]
+    };
+
+    const TIRE_PALETTE = {
+      "Standard Black (BKT)": [25, 25, 25],
+      "Bright Neon Green": [55, 250, 40],
+      "Clear / Translucent Ice Blue": [150, 215, 245],
+      "Bright Safety Orange": [255, 100, 0],
+      "Hot Pink / Neon Pink": [255, 60, 150],
+      "Bright Yellow": [255, 225, 0],
+      "Mud Splattered Black": [60, 45, 35],
+      "Dirt / Clay Brown Splattered": [120, 80, 50],
+      "White / Snow White": [245, 245, 245],
+      "Olive Drab Camo Green": [80, 90, 55],
+      "Two-Tone Swirl (Black/Green)": [35, 70, 35],
+      "Two-Tone Swirl (Black/Orange)": [70, 40, 20],
+      "Translucent Purple / Glitter": [140, 60, 170],
+      "Glow-in-the-Dark Green / White": [210, 245, 195],
+      "Solid Grey": [128, 128, 128],
+      "Deep Red": [140, 20, 25],
+      "Muted Purple": [110, 75, 125],
+      "Dark Blue": [20, 40, 90],
+      "Solid Tan": [195, 165, 125],
+      "Raw Rubber Brown": [105, 70, 45],
+      "Silver Metallic Sparkle": [190, 195, 205],
+      "Fluorescent Yellow": [245, 255, 40]
+    };
+
     let vaultsState = {
       activeGarageId: 'garage_1',
       garages: [
@@ -1033,9 +1208,10 @@
               variation: '30th Anniversary',
               series: 'Series 14',
               scale: '1:64',
-              chassis: 'Purple',
-              rim: 'Green',
-              tire: 'Black BKT',
+              body: 'Gloss Black',
+              chassis: 'Metallic Purple / Dark Violet',
+              rim: 'Lime Green / Neon Green',
+              tire: 'Standard Black (BKT)',
               image: 'logo.jpg'
             },
             {
@@ -1044,9 +1220,10 @@
               variation: 'First Edition Horns',
               series: 'Series 22',
               scale: '1:64',
-              chassis: 'Pink',
-              rim: 'Teal',
-              tire: 'White Wall',
+              body: 'Pastel Pink / Hot Pink',
+              chassis: 'Electric Violet / Magenta',
+              rim: 'Cyan / Sparkle Teal',
+              tire: 'White / Snow White',
               image: null
             },
             {
@@ -1055,9 +1232,10 @@
               variation: 'Translucent Mystery Key',
               series: 'Minis Series 3',
               scale: 'Mini / Micro',
-              chassis: 'Clear Blue',
-              rim: 'Silver',
-              tire: 'Solid Gray',
+              body: 'Teal / Aqua Shark Blue',
+              chassis: 'Glacier Blue / Sky Blue',
+              rim: 'Chrome Silver',
+              tire: 'Solid Grey',
               image: null
             }
           ]
@@ -1073,6 +1251,7 @@
     let driveFileId = null;
 
     function init() {
+      populateDropdowns();
       const stored = localStorage.getItem(STORAGE_KEY);
       if (stored) {
         try {
@@ -1085,6 +1264,38 @@
         saveState();
       }
       refreshUI();
+    }
+
+    function populateDropdowns() {
+      // Model Dropdown
+      const modelSelect = document.getElementById('input-model');
+      let modelHtml = MASTER_TRUCK_NAMES.map(m => `<option value="${escapeHtml(m)}">${escapeHtml(m)}</option>`).join('');
+      modelHtml += `<option value="CUSTOM">+ Other / Custom Truck (Fill in below)</option>`;
+      modelSelect.innerHTML = modelHtml;
+
+      // Color Component Selects
+      setupColorDropdown('input-body', BODY_PALETTE);
+      setupColorDropdown('input-chassis', CHASSIS_PALETTE);
+      setupColorDropdown('input-rim', RIM_PALETTE);
+      setupColorDropdown('input-tire', TIRE_PALETTE);
+
+      // Filters
+      populateFilterOptions('filter-chassis', CHASSIS_PALETTE, 'Chassis: All');
+      populateFilterOptions('filter-rim', RIM_PALETTE, 'Rims: All');
+    }
+
+    function setupColorDropdown(elementId, palette) {
+      const select = document.getElementById(elementId);
+      let html = Object.keys(palette).map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+      html += `<option value="CUSTOM">+ Other / Custom Color</option>`;
+      select.innerHTML = html;
+    }
+
+    function populateFilterOptions(elementId, palette, defaultLabel) {
+      const select = document.getElementById(elementId);
+      let html = `<option value="">${defaultLabel}</option>`;
+      html += Object.keys(palette).map(c => `<option value="${escapeHtml(c)}">${escapeHtml(c)}</option>`).join('');
+      select.innerHTML = html;
     }
 
     function saveState() {
@@ -1119,7 +1330,7 @@
       const rimFilter = (document.getElementById('filter-rim').value || '').toLowerCase();
 
       const filtered = activeGarage.trucks.filter(t => {
-        const full = `${t.model} ${t.variation || ''} ${t.series || ''}`.toLowerCase();
+        const full = `${t.model} ${t.variation || ''} ${t.series || ''} ${t.body || ''} ${t.chassis || ''} ${t.rim || ''} ${t.tire || ''}`.toLowerCase();
         const matchesQ = full.includes(query);
         const matchesScale = !scaleFilter || t.scale === scaleFilter;
         const matchesChassis = !chassisFilter || (t.chassis || '').toLowerCase().includes(chassisFilter);
@@ -1145,10 +1356,10 @@
             ${t.image 
               ? `<img src="${t.image}" alt="${escapeHtml(t.model)}">` 
               : `<svg width="90" height="65" viewBox="0 0 100 70" fill="none">
-                   <rect x="25" y="20" width="50" height="25" rx="5" fill="#374151"/>
-                   <circle cx="32" cy="50" r="14" fill="#1f2937" stroke="${getColorHex(t.rim)}" stroke-width="4"/>
-                   <circle cx="68" cy="50" r="14" fill="#1f2937" stroke="${getColorHex(t.rim)}" stroke-width="4"/>
-                   <rect x="20" y="40" width="60" height="5" fill="${getColorHex(t.chassis)}"/>
+                   <rect x="25" y="20" width="50" height="25" rx="5" fill="${getColorHex('body', t.body)}"/>
+                   <circle cx="32" cy="50" r="14" fill="${getColorHex('tire', t.tire)}" stroke="${getColorHex('rim', t.rim)}" stroke-width="4"/>
+                   <circle cx="68" cy="50" r="14" fill="${getColorHex('tire', t.tire)}" stroke="${getColorHex('rim', t.rim)}" stroke-width="4"/>
+                   <rect x="20" y="40" width="60" height="5" fill="${getColorHex('chassis', t.chassis)}"/>
                  </svg>`
             }
           </div>
@@ -1157,23 +1368,30 @@
             <div class="truck-series">${escapeHtml(t.series || 'Standard')} • ${escapeHtml(t.variation || 'Base')}</div>
             <div class="color-chips-row">
               <div class="color-chip">
+                <span class="color-chip-label">Body</span>
+                <span class="color-chip-val" title="${escapeHtml(t.body || 'N/A')}">
+                  <span class="dot-color" style="background:${getColorHex('body', t.body)};"></span>
+                  ${escapeHtml(t.body || 'N/A')}
+                </span>
+              </div>
+              <div class="color-chip">
                 <span class="color-chip-label">Chassis</span>
-                <span class="color-chip-val">
-                  <span class="dot-color" style="background:${getColorHex(t.chassis)};"></span>
+                <span class="color-chip-val" title="${escapeHtml(t.chassis || 'N/A')}">
+                  <span class="dot-color" style="background:${getColorHex('chassis', t.chassis)};"></span>
                   ${escapeHtml(t.chassis || 'N/A')}
                 </span>
               </div>
               <div class="color-chip">
                 <span class="color-chip-label">Rims</span>
-                <span class="color-chip-val">
-                  <span class="dot-color" style="background:${getColorHex(t.rim)};"></span>
+                <span class="color-chip-val" title="${escapeHtml(t.rim || 'N/A')}">
+                  <span class="dot-color" style="background:${getColorHex('rim', t.rim)};"></span>
                   ${escapeHtml(t.rim || 'N/A')}
                 </span>
               </div>
               <div class="color-chip">
                 <span class="color-chip-label">Tires</span>
-                <span class="color-chip-val">
-                  <span class="dot-color" style="background:${getColorHex(t.tire)};"></span>
+                <span class="color-chip-val" title="${escapeHtml(t.tire || 'N/A')}">
+                  <span class="dot-color" style="background:${getColorHex('tire', t.tire)};"></span>
                   ${escapeHtml(t.tire || 'N/A')}
                 </span>
               </div>
@@ -1187,18 +1405,17 @@
       `).join('');
     }
 
-    function getColorHex(colorName) {
+    function getColorHex(type, colorName) {
       if (!colorName) return '#9ca3af';
-      const c = colorName.toLowerCase();
-      if (c.includes('green') || c.includes('glow')) return '#10b981';
-      if (c.includes('purple')) return '#a855f7';
-      if (c.includes('black') || c.includes('bkt')) return '#1f2937';
-      if (c.includes('chrome') || c.includes('silver')) return '#e5e7eb';
-      if (c.includes('yellow') || c.includes('neon')) return '#facc15';
-      if (c.includes('blue') || c.includes('ice')) return '#3b82f6';
-      if (c.includes('red')) return '#ef4444';
-      if (c.includes('pink')) return '#ec4899';
-      if (c.includes('teal')) return '#14b8a6';
+      let palette = BODY_PALETTE;
+      if (type === 'chassis') palette = CHASSIS_PALETTE;
+      if (type === 'rim') palette = RIM_PALETTE;
+      if (type === 'tire') palette = TIRE_PALETTE;
+
+      if (palette[colorName]) {
+        const rgb = palette[colorName];
+        return `rgb(${rgb[0]}, ${rgb[1]}, ${rgb[2]})`;
+      }
       return '#f59e0b';
     }
 
@@ -1322,13 +1539,30 @@
       document.getElementById('leaderboard-modal').classList.remove('active');
     }
 
-    // --- TRUCK CRUD ---
+    // --- TRUCK CRUD & CUSTOM FIELDS ---
+    function toggleCustomColorInput(component, value) {
+      const wrap = document.getElementById(`custom-${component}-wrap`);
+      if (wrap) {
+        wrap.style.display = (value === 'CUSTOM') ? 'block' : 'none';
+      }
+    }
+
+    function checkCustomModel(val) {
+      document.getElementById('custom-name-wrap').style.display = (val === 'CUSTOM') ? 'block' : 'none';
+    }
+
     function openAddTruckModal() {
       document.getElementById('edit-truck-id').value = '';
       document.getElementById('modal-heading').innerText = `Add Truck to ${getActiveGarage().name}`;
       document.getElementById('truck-form').reset();
+      
       document.getElementById('input-model').value = 'Grave Digger';
       document.getElementById('custom-name-wrap').style.display = 'none';
+
+      ['body', 'chassis', 'rim', 'tire'].forEach(c => {
+        document.getElementById(`custom-${c}-wrap`).style.display = 'none';
+      });
+
       document.getElementById('canvas-wrapper').style.display = 'none';
       pendingImageData = null;
       document.getElementById('truck-modal').classList.add('active');
@@ -1342,9 +1576,10 @@
       document.getElementById('edit-truck-id').value = item.id;
       document.getElementById('modal-heading').innerText = 'Edit Truck Spec';
 
+      // Set Model
       const modelSelect = document.getElementById('input-model');
-      const hasOption = Array.from(modelSelect.options).some(o => o.value === item.model);
-      if (hasOption) {
+      const hasModel = Array.from(modelSelect.options).some(o => o.value === item.model);
+      if (hasModel) {
         modelSelect.value = item.model;
         document.getElementById('custom-name-wrap').style.display = 'none';
       } else {
@@ -1353,11 +1588,14 @@
         document.getElementById('input-custom-model').value = item.model;
       }
 
+      // Set Colors
+      setColorField('body', item.body, BODY_PALETTE);
+      setColorField('chassis', item.chassis, CHASSIS_PALETTE);
+      setColorField('rim', item.rim, RIM_PALETTE);
+      setColorField('tire', item.tire, TIRE_PALETTE);
+
       document.getElementById('input-scale').value = item.scale || '1:64';
       document.getElementById('input-series').value = item.series || '';
-      document.getElementById('input-chassis').value = item.chassis || '';
-      document.getElementById('input-rim').value = item.rim || '';
-      document.getElementById('input-tire').value = item.tire || '';
       document.getElementById('input-variation').value = item.variation || '';
 
       pendingImageData = item.image || null;
@@ -1370,30 +1608,53 @@
       document.getElementById('truck-modal').classList.add('active');
     }
 
+    function setColorField(comp, value, palette) {
+      const select = document.getElementById(`input-${comp}`);
+      const customWrap = document.getElementById(`custom-${comp}-wrap`);
+      const customInput = document.getElementById(`input-custom-${comp}`);
+
+      if (value && palette[value]) {
+        select.value = value;
+        customWrap.style.display = 'none';
+      } else if (value) {
+        select.value = 'CUSTOM';
+        customWrap.style.display = 'block';
+        customInput.value = value;
+      } else {
+        select.selectedIndex = 0;
+        customWrap.style.display = 'none';
+      }
+    }
+
     function closeTruckModal() {
       document.getElementById('truck-modal').classList.remove('active');
     }
 
-    function checkCustomModel(val) {
-      document.getElementById('custom-name-wrap').style.display = (val === 'CUSTOM') ? 'block' : 'none';
-    }
-
     function saveTruckRecord() {
       const editId = document.getElementById('edit-truck-id').value;
+      
       const modelSelect = document.getElementById('input-model').value;
-      let finalModel = modelSelect;
-      if (modelSelect === 'CUSTOM') {
-        finalModel = (document.getElementById('input-custom-model').value || '').trim() || 'Custom Truck';
-      }
+      const finalModel = (modelSelect === 'CUSTOM') 
+        ? ((document.getElementById('input-custom-model').value || '').trim() || 'Custom Monster Truck')
+        : modelSelect;
+
+      const getResolvedColor = (comp) => {
+        const val = document.getElementById(`input-${comp}`).value;
+        if (val === 'CUSTOM') {
+          return (document.getElementById(`input-custom-${comp}`).value || '').trim() || 'Custom Color';
+        }
+        return val;
+      };
 
       const truckData = {
         id: editId || 'truck_' + Date.now(),
         model: finalModel,
         scale: document.getElementById('input-scale').value,
         series: document.getElementById('input-series').value.trim(),
-        chassis: document.getElementById('input-chassis').value.trim(),
-        rim: document.getElementById('input-rim').value.trim(),
-        tire: document.getElementById('input-tire').value.trim(),
+        body: getResolvedColor('body'),
+        chassis: getResolvedColor('chassis'),
+        rim: getResolvedColor('rim'),
+        tire: getResolvedColor('tire'),
         variation: document.getElementById('input-variation').value.trim(),
         image: pendingImageData
       };
@@ -1438,7 +1699,7 @@
       if (gapiToken) syncToGoogleDrive(false);
     }
 
-    // --- PHOTO SAMPLER & CANVAS ---
+    // --- PHOTO SAMPLER & AI CLOSEST-COLOR MATCHING ---
     function handleImageFile(e) {
       const file = e.target.files && e.target.files[0];
       if (!file) return;
@@ -1484,14 +1745,22 @@
           const x = (evt.clientX - rect.left) * scaleX;
           const y = (evt.clientY - rect.top) * scaleY;
           const pixel = ctx.getImageData(x, y, 1, 1).data;
-          const colorName = approximateColorName(pixel[0], pixel[1], pixel[2]);
+          
+          let palette = BODY_PALETTE;
+          if (activePickerComponent === 'chassis') palette = CHASSIS_PALETTE;
+          if (activePickerComponent === 'rim') palette = RIM_PALETTE;
+          if (activePickerComponent === 'tire') palette = TIRE_PALETTE;
 
-          if (activePickerComponent === 'chassis') document.getElementById('input-chassis').value = colorName;
-          if (activePickerComponent === 'rim') document.getElementById('input-rim').value = colorName;
-          if (activePickerComponent === 'tire') document.getElementById('input-tire').value = colorName;
+          const matchedColor = findClosestColor(pixel[0], pixel[1], pixel[2], palette);
 
+          const selectEl = document.getElementById(`input-${activePickerComponent}`);
+          if (selectEl) {
+            selectEl.value = matchedColor;
+            toggleCustomColorInput(activePickerComponent, matchedColor);
+          }
+
+          showToast(`Matched ${matchedColor} for ${activePickerComponent}!`);
           resetPickers();
-          showToast(`Sampled ${colorName} for ${activePickerComponent}!`);
         };
       };
       img.src = src;
@@ -1502,29 +1771,39 @@
       activePickerComponent = type;
       const btn = document.getElementById(`btn-pick-${type}`);
       if (btn) btn.classList.add('active');
-      showToast(`Tap the truck photograph to sample ${type} color`);
+      showToast(`Tap the photo to match closest ${type} color`);
     }
 
     function resetPickers() {
       activePickerComponent = null;
-      ['chassis', 'rim', 'tire'].forEach(k => {
+      ['body', 'chassis', 'rim', 'tire'].forEach(k => {
         const btn = document.getElementById(`btn-pick-${k}`);
         if (btn) btn.classList.remove('active');
       });
     }
 
-    function approximateColorName(r, g, b) {
-      const max = Math.max(r, g, b), min = Math.min(r, g, b);
-      if (max < 50) return 'Black BKT';
-      if (min > 200) return 'White';
-      if (max - min < 30) return 'Silver / Chrome';
-      if (r > 150 && g < 80 && b < 80) return 'Red';
-      if (g > 140 && r < 100) return 'Green Glow';
-      if (b > 150 && r < 100) return 'Blue Ice';
-      if (r > 140 && b > 140 && g < 100) return 'Purple';
-      if (r > 180 && g > 150 && b < 80) return 'Neon Yellow';
-      if (r > 180 && g > 90 && b < 60) return 'Orange';
-      return `Custom (${r}, ${g}, ${b})`;
+    // Weighted Euclidean Perceptual Distance (Redmean)
+    function findClosestColor(r, g, b, palette) {
+      let closestName = Object.keys(palette)[0];
+      let minDistance = Infinity;
+
+      for (const [name, rgb] of Object.entries(palette)) {
+        const rmean = (r + rgb[0]) / 2;
+        const dr = r - rgb[0];
+        const dg = g - rgb[1];
+        const db = b - rgb[2];
+        const distance = Math.sqrt(
+          (2 + rmean / 256) * (dr * dr) + 
+          4 * (dg * dg) + 
+          (2 + (255 - rmean) / 256) * (db * db)
+        );
+
+        if (distance < minDistance) {
+          minDistance = distance;
+          closestName = name;
+        }
+      }
+      return closestName;
     }
 
     // --- GOOGLE CLOUD OAUTH & GOOGLE DRIVE PERSISTENCE ---
@@ -1602,7 +1881,7 @@
 
         const payload = JSON.stringify({
           app: 'JAM Vault',
-          version: '3.0',
+          version: '3.1',
           updatedAt: new Date().toISOString(),
           vaultsState: vaultsState
         });
@@ -1672,11 +1951,10 @@
           refreshUI();
           showToast('Garages restored from Google Drive!');
         } else if (backupData && Array.isArray(backupData.fleet)) {
-          // Backward compatibility with v2 backups
           vaultsState.garages[0].trucks = backupData.fleet;
           saveState();
           refreshUI();
-          showToast('Restored catalog from v2 backup!');
+          showToast('Restored catalog from backup!');
         } else {
           showToast('Backup file was empty or corrupted');
         }
