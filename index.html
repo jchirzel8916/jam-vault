@@ -4,17 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>JAM Vault — Monster Truck & Die-Cast Collector</title>
-  <link rel="icon" type="image/jpeg" href="logo.png">
-  <link rel="apple-touch-icon" href="logo.jpg">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <!-- Google Identity Services -->
   <script src="https://accounts.google.com/gsi/client" async defer></script>
-  
-  <!-- Google AdSense -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6646447476863581" crossorigin="anonymous"></script>
 
   <style>
     :root {
@@ -38,11 +35,6 @@
       -webkit-tap-highlight-color: transparent;
     }
 
-     ins.adsbygoogle[data-ad-status="unfilled"],
-    .google-auto-placed {
-      display: none !important;
-    }
-    
     html, body {
       overflow-x: hidden;
       width: 100%;
@@ -84,7 +76,7 @@
     .brand-wrap {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
       cursor: pointer;
     }
 
@@ -93,11 +85,10 @@
       max-height: 44px !important;
       width: auto !important;
       max-width: 140px !important;
-      object-fit: contain;
-      display: block;
+      object-fit: contain !important;
+      display: block !important;
       filter: drop-shadow(0 2px 8px var(--accent-yellow-glow));
     }
-
 
     .brand-title {
       font-family: 'Outfit', sans-serif;
@@ -793,7 +784,7 @@
   <header>
     <div class="header-container">
       <div class="brand-wrap" onclick="location.reload()">
-        <img class="brand-logo-img" src="logo.png" alt="JAM Vault Logo" height="42" style="height: 42px !important; max-height: 42px !important; width: auto !important; max-width: 140px !important; display: block;">
+        <img class="brand-logo-img" src="logo.png" alt="JAM Vault Logo" width="44" height="44" style="height: 44px !important; width: auto !important; max-width: 140px !important;">
         <div class="brand-title">
           JAM VAULT <span class="badge-pro">PRO</span>
         </div>
@@ -1249,7 +1240,6 @@
       ]
     };
 
-
     let pendingImageData = null;
     let pendingDeleteId = null;
     let pendingDeleteGarageId = null;
@@ -1275,19 +1265,16 @@
     }
 
     function populateDropdowns() {
-      // Model Dropdown
       const modelSelect = document.getElementById('input-model');
       let modelHtml = MASTER_TRUCK_NAMES.map(m => `<option value="${escapeHtml(m)}">${escapeHtml(m)}</option>`).join('');
       modelHtml += `<option value="CUSTOM">+ Other / Custom Truck (Fill in below)</option>`;
       modelSelect.innerHTML = modelHtml;
 
-      // Color Component Selects
       setupColorDropdown('input-body', BODY_PALETTE);
       setupColorDropdown('input-chassis', CHASSIS_PALETTE);
       setupColorDropdown('input-rim', RIM_PALETTE);
       setupColorDropdown('input-tire', TIRE_PALETTE);
 
-      // Filters
       populateFilterOptions('filter-chassis', CHASSIS_PALETTE, 'Chassis: All');
       populateFilterOptions('filter-rim', RIM_PALETTE, 'Rims: All');
     }
@@ -1346,7 +1333,7 @@
         return matchesQ && matchesScale && matchesChassis && matchesRim;
       });
 
-           if (filtered.length === 0) {
+      if (filtered.length === 0) {
         container.innerHTML = `
           <div style="grid-column: 1/-1; text-align: center; padding: 40px 20px; background: var(--card-bg); border-radius: 16px;">
             <div style="font-size: 2.2rem; margin-bottom: 6px;">🏁</div>
@@ -1361,7 +1348,6 @@
         `;
         return;
       }
-
 
       container.innerHTML = filtered.map(t => `
         <div class="truck-card">
@@ -1524,14 +1510,13 @@
       const toDelete = pendingDeleteGarageId;
       vaultsState.garages = vaultsState.garages.filter(g => g.id !== toDelete);
 
-      // If deleted garage was the active one, fallback to first garage
       if (vaultsState.activeGarageId === toDelete) {
         vaultsState.activeGarageId = vaultsState.garages[0].id;
       }
 
       saveState();
       closeDeleteGarageModal();
-      openGarageModal(); // Refresh the list
+      openGarageModal();
       refreshUI();
       showToast("Garage deleted.");
       if (gapiToken) syncToGoogleDrive(false);
@@ -1637,7 +1622,6 @@
       document.getElementById('edit-truck-id').value = item.id;
       document.getElementById('modal-heading').innerText = 'Edit Truck Spec';
 
-      // Move Garage Dropdown Setup
       const moveWrap = document.getElementById('move-garage-wrap');
       const garageSelect = document.getElementById('input-truck-garage');
       if (vaultsState.garages.length > 1) {
@@ -1649,7 +1633,6 @@
         moveWrap.style.display = 'none';
       }
 
-      // Set Model
       const modelSelect = document.getElementById('input-model');
       const hasModel = Array.from(modelSelect.options).some(o => o.value === item.model);
       if (hasModel) {
@@ -1661,7 +1644,6 @@
         document.getElementById('input-custom-model').value = item.model;
       }
 
-      // Set Colors
       setColorField('body', item.body, BODY_PALETTE);
       setColorField('chassis', item.chassis, CHASSIS_PALETTE);
       setColorField('rim', item.rim, RIM_PALETTE);
@@ -1740,7 +1722,6 @@
           : activeGarage.id;
 
         if (targetGarageId !== activeGarage.id) {
-          // Transfer to the selected destination garage
           activeGarage.trucks = activeGarage.trucks.filter(t => t.id !== editId);
           const destination = vaultsState.garages.find(g => g.id === targetGarageId);
           if (destination) {
@@ -1748,7 +1729,6 @@
             showToast(`Moved truck to ${destination.name}!`);
           }
         } else {
-          // Update in-place
           activeGarage.trucks = activeGarage.trucks.map(t => t.id === editId ? truckData : t);
           showToast('Truck updated in JAM Vault!');
         }
