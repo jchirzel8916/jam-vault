@@ -1107,7 +1107,7 @@
   <footer>
     <div>JAM Vault PRO • Monster Truck & Die-Cast Fleet Organizer</div>
     <div style="margin-top: 8px; display: flex; justify-content: center; gap: 16px;">
-      <a href="about.html">About</a>
+      <a href="guide.html">Guide</a>
       <a href="privacy.html">Privacy Policy</a>
       <a href="terms.html">Terms of Service</a>
     </div>
@@ -1341,16 +1341,22 @@
         return matchesQ && matchesScale && matchesChassis && matchesRim;
       });
 
-      if (filtered.length === 0) {
+           if (filtered.length === 0) {
         container.innerHTML = `
           <div style="grid-column: 1/-1; text-align: center; padding: 40px 20px; background: var(--card-bg); border-radius: 16px;">
             <div style="font-size: 2.2rem; margin-bottom: 6px;">🏁</div>
-            <h3>No Trucks Found</h3>
-            <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Tap "+ Add Truck" above to record a new rig in this garage!</p>
+            <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.3rem;">No Trucks Found</h3>
+            <p style="color: var(--text-muted); font-size: 0.88rem; margin-top: 6px;">
+              Tap <strong style="color: var(--accent-yellow);">"+ Add Truck"</strong> above to record your first rig in this garage!
+            </p>
+            <p style="margin-top: 10px; font-size: 0.82rem; color: var(--text-muted);">
+              New here? <a href="about.html" style="color: var(--accent-yellow); text-decoration: underline; font-weight: 600;">Read our guide on how to use JAM Vault</a> to learn how to catalog trucks and sync your collection with Google Drive.
+            </p>
           </div>
         `;
         return;
       }
+
 
       container.innerHTML = filtered.map(t => `
         <div class="truck-card">
