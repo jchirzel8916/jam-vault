@@ -66,25 +66,16 @@
       color: #000;
       font-family: 'Outfit', sans-serif;
       font-weight: 900;
-      font-size: 0.74rem;
-      letter-spacing: 0.8px;
+      font-size: 0.82rem;
+      letter-spacing: 0.6px;
       text-transform: uppercase;
-      padding: 5px 12px;
+      padding: 7px 14px;
       text-align: center;
       border-bottom: 2px solid #000;
       display: flex;
       justify-content: center;
       align-items: center;
       gap: 12px;
-      flex-wrap: wrap;
-    }
-
-    .ticker-pill {
-      background: #000;
-      color: #fff;
-      padding: 2px 7px;
-      border-radius: 6px;
-      font-size: 0.65rem;
     }
 
     /* HEADER */
@@ -131,21 +122,23 @@
       font-weight: 900;
       letter-spacing: 0.5px;
       color: #fff;
-      text-shadow: 2px 2px 0 #000;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
     }
 
     .badge-pro {
-      font-size: 0.62rem;
-      background: var(--cartoon-neon);
+      font-size: 0.65rem;
+      background: #10b981;
       color: #000;
-      font-weight: 900;
-      padding: 2px 6px;
-      border-radius: 6px;
-      border: 2px solid #000;
-      box-shadow: 1px 1px 0 #000;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 12px;
+      border: 1.5px solid #000;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: inline-block;
+      line-height: 1.2;
     }
 
     .header-actions {
@@ -260,10 +253,10 @@
       background: rgba(245, 158, 11, 0.15);
       border: 2px solid var(--accent-yellow);
       color: var(--accent-yellow);
-      font-size: 0.7rem;
+      font-size: 0.72rem;
       font-weight: 900;
       text-transform: uppercase;
-      padding: 3px 8px;
+      padding: 3px 10px;
       border-radius: 6px;
       display: inline-flex;
       align-items: center;
@@ -888,11 +881,9 @@
 </head>
 <body>
 
-  <!-- COMIC TICKER BAR -->
+  <!-- TOP BANNER -->
   <div class="top-ticker">
-    <span>⚠️ JAM VAULT CARTOON OVERHAUL</span>
-    <span class="ticker-pill">COLLECTOR V2.4</span>
-    <span>TRACK STATS • CUSTOM BUILDS • 1:64 & 1:24 DIE-CASTS</span>
+    <span>Welcome to the all new JAM Vault</span>
   </div>
 
   <header>
@@ -900,7 +891,7 @@
       <div class="brand-wrap" onclick="location.reload()">
         <img class="brand-logo-img" src="logo.png" alt="JAM Vault Logo" width="42" height="42">
         <div class="brand-title">
-          JAM VAULT <span class="badge-pro">PRO</span>
+          JAM VAULT <span class="badge-pro">Pro</span>
         </div>
       </div>
 
@@ -910,7 +901,7 @@
         </button>
 
         <button class="btn-chunky btn-trophy-top" onclick="openLeaderboardModal()">
-          🏆 <span>Trophy Deck</span>
+          🏆 <span>Leaderboards</span>
         </button>
 
         <button class="btn-chunky btn-add-chunky" onclick="openAddTruckModal()">
@@ -943,10 +934,10 @@
   </div>
 
   <main>
-    <!-- HERO STATS SECTION (ONLY TRUCK COUNT) -->
+    <!-- HERO STATS SECTION -->
     <section class="hero-stat-card">
       <div class="hero-stat-left">
-        <div class="theme-tag">⚡ Arena Theme Active</div>
+        <div class="theme-tag">⚡ Are you ready to JAM</div>
         <h1 class="hero-title">
           <span id="hero-garage-name">Main Garage</span>
           <button style="background:none; border:none; color:var(--cartoon-yellow); cursor:pointer; font-size:1.1rem;" onclick="openEditGarageNameModal()" title="Edit Garage Name">✏️</button>
@@ -1039,11 +1030,11 @@
     </div>
   </div>
 
-  <!-- TROPHY DECK (LEADERBOARD) MODAL -->
+  <!-- LEADERBOARDS MODAL -->
   <div class="modal-backdrop" id="leaderboard-modal">
     <div class="modal-box">
       <div class="modal-header">
-        <h3>🏆 Trophy Deck (Global Board)</h3>
+        <h3>🏆 Leaderboards (Global Board)</h3>
         <button class="btn-close-modal" onclick="closeLeaderboardModal()">✕</button>
       </div>
       <div style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 10px;">
@@ -1600,7 +1591,7 @@
       if (gapiToken) syncToGoogleDrive(false);
     }
 
-    // --- TROPHY DECK (LEADERBOARD) MODAL ---
+    // --- LEADERBOARDS MODAL ---
     function openLeaderboardModal() {
       const activeGarage = getActiveGarage();
       const userCount = activeGarage.trucks.length;
