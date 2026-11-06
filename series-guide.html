@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Monster Truck 1:64 & Minis Series Checklist | JAM Vault</title>
+  <meta name="description" content="Comprehensive collector database and release checklist for 1:64 scale monster trucks and Minis waves. Track chassis colors, rim editions, and rare chase variants.">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@600;800;900&family=Plus+Jakarta+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-dark: #080a0f;
+      --card-bg: #0f1523;
+      --border-black: #000000;
+      --cartoon-yellow: #ffb703;
+      --cartoon-neon: #10b981;
+      --cartoon-pink: #ec4899;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --shadow-heavy: 0 4px 0 #000;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: var(--bg-dark);
+      background-image: 
+        linear-gradient(rgba(8, 10, 15, 0.88), rgba(8, 10, 15, 0.95)),
+        url('arena-bg.jpg');
+      background-size: cover;
+      background-position: center top;
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-ticker {
+      background: #fbbf24;
+      color: #000;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 900;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      padding: 8px 14px;
+      text-align: center;
+      border-bottom: 2px solid #000;
+      letter-spacing: 0.5px;
+    }
+
+    header {
+      background: rgba(12, 16, 26, 0.95);
+      border-bottom: 3px solid #000;
+      padding: 12px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+    }
+
+    .header-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .brand-logo-img { height: 38px; width: auto; object-fit: contain; }
+    .brand-title { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 900; color: #fff; }
+
+    .btn-return {
+      font-family: 'Outfit', sans-serif;
+      background: #fbbf24;
+      color: #000;
+      font-weight: 900;
+      font-size: 0.8rem;
+      padding: 8px 14px;
+      border-radius: 8px;
+      border: 2px solid #000;
+      box-shadow: var(--shadow-heavy);
+      text-decoration: none;
+      text-transform: uppercase;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 24px auto 50px;
+      padding: 0 16px;
+      width: 100%;
+      flex: 1;
+    }
+
+    .guide-hero {
+      background: var(--card-bg);
+      border: 3px solid #000;
+      border-radius: 16px;
+      box-shadow: var(--shadow-heavy);
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+
+    .tag-pill {
+      background: rgba(251, 191, 36, 0.15);
+      border: 1.5px solid var(--cartoon-yellow);
+      color: var(--cartoon-yellow);
+      font-size: 0.72rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      padding: 3px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: 1.2;
+      margin-bottom: 8px;
+    }
+
+    .guide-intro {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+
+    /* DIRECTORY FILTER & SEARCH */
+    .filter-panel {
+      background: #0f1523;
+      border: 3px solid #000;
+      box-shadow: var(--shadow-heavy);
+      border-radius: 14px;
+      padding: 14px 18px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .search-input-wrap { flex: 1; min-width: 240px; position: relative; }
+    .search-input-wrap input {
+      width: 100%;
+      background: #090c14;
+      border: 2px solid #000;
+      border-radius: 10px;
+      padding: 10px 12px;
+      color: #fff;
+      font-size: 0.88rem;
+      font-weight: 600;
+      outline: none;
+    }
+
+    .filter-pills-row { display: flex; gap: 6px; flex-wrap: wrap; }
+    .filter-pill-btn {
+      background: #1e293b;
+      color: #cbd5e1;
+      border: 2px solid #000;
+      box-shadow: 0 2px 0 #000;
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 800;
+      cursor: pointer;
+      text-transform: uppercase;
+    }
+
+    .filter-pill-btn.active { background: #fbbf24; color: #000; }
+
+    /* SERIES SECTION STYLES */
+    .series-block {
+      background: var(--card-bg);
+      border: 3px solid #000;
+      border-radius: 16px;
+      box-shadow: var(--shadow-heavy);
+      margin-bottom: 22px;
+      overflow: hidden;
+    }
+
+    .series-header {
+      background: #151c2e;
+      border-bottom: 2px solid #000;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .series-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      color: #fff;
+    }
+
+    .chase-badge {
+      background: #ec4899;
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 900;
+      padding: 4px 8px;
+      border-radius: 6px;
+      border: 1.5px solid #000;
+      text-transform: uppercase;
+    }
+
+    .truck-checklist {
+      padding: 16px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
+    }
+
+    .checklist-item {
+      background: #090c14;
+      border: 2px solid #000;
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .checklist-item.is-chase {
+      border-color: #ec4899;
+      background: rgba(236, 72, 153, 0.08);
+    }
+
+    .item-name {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 0.95rem;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .item-specs {
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    .cta-box {
+      text-align: center;
+      background: #151c2e;
+      border: 3px solid #000;
+      border-radius: 16px;
+      box-shadow: var(--shadow-heavy);
+      padding: 26px 18px;
+      margin-top: 36px;
+    }
+
+    .cta-box h3 { font-family: 'Outfit', sans-serif; font-size: 1.4rem; margin-bottom: 6px; }
+    .cta-box p { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px; }
+
+    footer {
+      text-align: center;
+      padding: 24px 10px;
+      font-size: 0.76rem;
+      color: var(--text-muted);
+      border-top: 3px solid #000;
+      background: rgba(8, 10, 15, 0.95);
+    }
+    footer a { color: var(--text-muted); text-decoration: underline; }
+  </style>
+</head>
+<body>
+
+  <div class="top-ticker">
+    ⚡ Master Release Checklist: 1:64 Scale Mainlines, Minis Waves & Rare Chases
+  </div>
+
+  <header>
+    <div class="header-container">
+      <a href="index.html" class="brand-wrap">
+        <img class="brand-logo-img" src="logo.png" alt="JAM Vault Logo">
+        <span class="brand-title">JAM VAULT</span>
+      </a>
+      <a href="index.html" class="btn-return">← Back to Garage</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="guide-hero">
+      <span class="tag-pill">Collector Database</span>
+      <h1>Complete 1:64 Scale & Minis Release Checklist</h1>
+      <p class="guide-intro">
+        The complete collector directory for modern monster truck die-casts. Browse full wave rosters, authentic colorway specifications, and chase designations across standard 1:64 mainline releases and micro-scale blind packs.
+      </p>
+    </section>
+
+    <!-- SEARCH & CATEGORY FILTER -->
+    <section class="filter-panel">
+      <div class="search-input-wrap">
+        <input type="text" id="checklist-search" placeholder="Search truck name, series, or chase..." oninput="filterChecklist()">
+      </div>
+      <div class="filter-pills-row">
+        <button class="filter-pill-btn active" id="btn-cat-all" onclick="setCategoryFilter('all')">All Releases</button>
+        <button class="filter-pill-btn" id="btn-cat-mainline" onclick="setCategoryFilter('1:64')">1:64 Mainlines</button>
+        <button class="filter-pill-btn" id="btn-cat-minis" onclick="setCategoryFilter('minis')">Minis / Micro Waves</button>
+        <button class="filter-pill-btn" id="btn-cat-chase" onclick="setCategoryFilter('chase')">Chase Pieces</button>
+      </div>
+    </section>
+
+    <div id="series-container">
+
+      <!-- ================= 1:64 MAINLINE SERIES ================= -->
+
+      <!-- SERIES 35 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 35</div>
+          <span class="chase-badge">✨ Chase: Chrome Calavera</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Grave Digger (35th Anniv)</div><div class="item-specs">Chassis: Neon Green • Rims: Fluorescent Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Megalodon (Battle Damaged)</div><div class="item-specs">Chassis: Metallic Navy • Rims: Cyan Teal • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Sparkle Smash</div><div class="item-specs">Chassis: Electric Violet • Rims: Chrome Gold • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Lucas Stabilizer</div><div class="item-specs">Chassis: Gloss Red • Rims: Brushed Silver • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Calavera (Chase Variant) <span>⭐</span></div><div class="item-specs">Chassis: Clear Translucent • Rims: Chrome Gold • Specialty Foil</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 34 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 34</div>
+          <span class="chase-badge">✨ Chase: Gold Chrome Max-D</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Earth Shaker (Mud Dirty)</div><div class="item-specs">Chassis: Desert Khaki • Rims: Safety Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">ThunderROARus</div><div class="item-specs">Chassis: Toxic Lime • Rims: Matte Black • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Zombie</div><div class="item-specs">Chassis: Dark Violet • Rims: Lime Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">El Toro Loco (Orange)</div><div class="item-specs">Chassis: Blood Red • Rims: Safety Orange • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Max-D (Gold Chase) <span>⭐</span></div><div class="item-specs">Chassis: Gloss Black • Rims: Gold Chrome • Scale: 1:64</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 33 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 33</div>
+          <span class="chase-badge">✨ Chase: Sparkle Smash Chrome</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">JCB DIGatron</div><div class="item-specs">Chassis: Construction Yellow • Rims: Black • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Son-Uva Digger</div><div class="item-specs">Chassis: Royal Blue • Rims: Royal Blue • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Bakugan Dragonoid</div><div class="item-specs">Chassis: Blood Red • Rims: Gold Chrome • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Blue Thunder</div><div class="item-specs">Chassis: Navy Blue • Rims: Silver Chrome • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Sparkle Smash (Chase) <span>⭐</span></div><div class="item-specs">Chassis: Silver Chrome • Rims: Hot Pink • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 32 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 32</div>
+          <span class="chase-badge">✨ Chase: Dragon Chrome</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Grave Digger (Classic 1982)</div><div class="item-specs">Chassis: Silver / Grey • Rims: Chrome Silver • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Monster Mutt Dalmatian</div><div class="item-specs">Chassis: Off-White • Rims: Gloss Red • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Alien Invasion</div><div class="item-specs">Chassis: Neon Green • Rims: Lime Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Avenger</div><div class="item-specs">Chassis: Satin Black • Rims: Safety Orange • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Dragon (Foil Chase) <span>⭐</span></div><div class="item-specs">Chassis: Candy Red • Rims: Chrome Gold • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 31 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 31</div>
+          <span class="chase-badge">✨ Chase: Chrome Bakugan Dragonoid</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Grave Digger (Chrome Purple)</div><div class="item-specs">Chassis: Metallic Purple • Rims: Lime Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Lucas Stabilizer (Mud Splattered)</div><div class="item-specs">Chassis: Dark Red • Rims: Silver • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Megalodon (Battle Damaged Teal)</div><div class="item-specs">Chassis: Navy Blue • Rims: Cyan Teal • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Mohawk Warrior</div><div class="item-specs">Chassis: Gloss Black • Rims: Safety Orange • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Bakugan Dragonoid (Chrome Chase) <span>⭐</span></div><div class="item-specs">Chassis: Red Chrome • Rims: Gold Chrome • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 30 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 30</div>
+          <span class="chase-badge">✨ Chase: Chrome Earth Shaker</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">ThunderROARus (Orange Crest)</div><div class="item-specs">Chassis: Toxic Lime • Rims: Black • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Max-D (Spike Metal)</div><div class="item-specs">Chassis: Metallic Silver • Rims: Safety Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Zombie (Arms Out)</div><div class="item-specs">Chassis: Dark Violet • Rims: Lime Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Monster Mutt Dalmatian</div><div class="item-specs">Chassis: Off-White • Rims: Gloss Red • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Earth Shaker (Chrome Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Yellow • Rims: Black Chrome • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 29 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 29</div>
+          <span class="chase-badge">✨ Chase: Gold Son-Uva Digger</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Grave Digger (Ghost Flames)</div><div class="item-specs">Chassis: Neon Green • Rims: White • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">El Toro Loco (Ice Blue)</div><div class="item-specs">Chassis: Glacier Blue • Rims: Ice Blue • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Shocker</div><div class="item-specs">Chassis: Silver • Rims: Blue • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Jester</div><div class="item-specs">Chassis: Purple • Rims: Neon Green • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Son-Uva Digger (Gold Chrome Chase) <span>⭐</span></div><div class="item-specs">Chassis: Gold Chrome • Rims: Royal Blue • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 28 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 28</div>
+          <span class="chase-badge">✨ Chase: Chrome Megalodon</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Sparkle Smash</div><div class="item-specs">Chassis: Violet • Rims: Pink • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Lucas Stabilizer</div><div class="item-specs">Chassis: Red • Rims: Silver • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Blue Thunder</div><div class="item-specs">Chassis: Blue • Rims: Silver • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Avenger</div><div class="item-specs">Chassis: Black • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Megalodon (Chrome Chase) <span>⭐</span></div><div class="item-specs">Chassis: Silver Chrome • Rims: Cyan Teal • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 27 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 27</div>
+          <span class="chase-badge">✨ Chase: Bronze Max-D</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Grave Digger (30th Anniversary)</div><div class="item-specs">Chassis: Neon Green • Rims: Purple • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Soldier Fortune</div><div class="item-specs">Chassis: Military Green • Rims: Tan • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Bakugan Dragonoid</div><div class="item-specs">Chassis: Red • Rims: Gold • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Kraken</div><div class="item-specs">Chassis: Green • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Max-D (Bronze Chase) <span>⭐</span></div><div class="item-specs">Chassis: Bronze Chrome • Rims: Black • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 26 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 26</div>
+          <span class="chase-badge">✨ Chase: Chrome El Toro Loco</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Earth Shaker</div><div class="item-specs">Chassis: Khaki • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Monster Mutt Rottweiler</div><div class="item-specs">Chassis: Dark Brown • Rims: Red • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Velociraptor</div><div class="item-specs">Chassis: Grey • Rims: Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Alien Invasion</div><div class="item-specs">Chassis: Green • Rims: Lime • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">El Toro Loco (Orange Chrome Chase) <span>⭐</span></div><div class="item-specs">Chassis: Orange Chrome • Rims: Black • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 25 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 25</div>
+          <span class="chase-badge">✨ Chase: Platinum Grave Digger</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">ThunderROARus</div><div class="item-specs">Chassis: Green • Rims: Black • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Zombie</div><div class="item-specs">Chassis: Purple • Rims: Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Bounty Hunter</div><div class="item-specs">Chassis: Blue • Rims: Yellow • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Pirate's Curse</div><div class="item-specs">Chassis: Navy • Rims: Gold • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Grave Digger (Platinum Chase) <span>⭐</span></div><div class="item-specs">Chassis: Silver Platinum • Rims: Chrome Silver • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 24 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 24</div>
+          <span class="chase-badge">✨ Chase: Chrome Zombie</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Megalodon (Fire Variant)</div><div class="item-specs">Chassis: Red • Rims: Yellow • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Son-Uva Digger</div><div class="item-specs">Chassis: Blue • Rims: Blue • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Lucas Stabilizer</div><div class="item-specs">Chassis: Red • Rims: Silver • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Higher Education</div><div class="item-specs">Chassis: Yellow • Rims: Black • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Zombie (Chrome Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Purple • Rims: Neon Green • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 23 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 23</div>
+          <span class="chase-badge">✨ Chase: Gold Bakugan Dragonoid</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Grave Digger (Retro Mud)</div><div class="item-specs">Chassis: Green • Rims: Mud Splattered • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Max-D</div><div class="item-specs">Chassis: Silver • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Monster Mutt Dalmatian</div><div class="item-specs">Chassis: White • Rims: Red • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Mohawk Warrior</div><div class="item-specs">Chassis: Black • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Bakugan Dragonoid (Gold Chase) <span>⭐</span></div><div class="item-specs">Chassis: Gold Chrome • Rims: Red • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 22 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 22</div>
+          <span class="chase-badge">✨ Chase: Chrome Earth Shaker</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">El Toro Loco (Black)</div><div class="item-specs">Chassis: Red • Rims: Yellow • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Sparkle Smash</div><div class="item-specs">Chassis: Purple • Rims: Pink • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Blue Thunder</div><div class="item-specs">Chassis: Blue • Rims: Silver • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Soldier Fortune Black Ops</div><div class="item-specs">Chassis: Black • Rims: Grey • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Earth Shaker (Foil Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Tan • Rims: Orange • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 21 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 21</div>
+          <span class="chase-badge">✨ Chase: Chrome Megalodon</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Grave Digger (Silver Trim)</div><div class="item-specs">Chassis: Green • Rims: Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Avenger</div><div class="item-specs">Chassis: Black • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Dragon</div><div class="item-specs">Chassis: Green • Rims: Gold • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Iron Outlaw</div><div class="item-specs">Chassis: Silver • Rims: Blue • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Megalodon (Ghost Chrome Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Blue • Rims: White • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 20 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 20</div>
+          <span class="chase-badge">✨ Chase: Gold Max-D</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Zombie</div><div class="item-specs">Chassis: Purple • Rims: Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Son-Uva Digger</div><div class="item-specs">Chassis: Blue • Rims: Blue • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Monster Mutt Rottweiler</div><div class="item-specs">Chassis: Brown • Rims: Red • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Bad Company</div><div class="item-specs">Chassis: Silver • Rims: Black • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Max-D (Gold Chase) <span>⭐</span></div><div class="item-specs">Chassis: Gold Chrome • Rims: Black • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 19 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 19</div>
+          <span class="chase-badge">✨ Chase: Chrome El Toro Loco</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Grave Digger (Purple Edition)</div><div class="item-specs">Chassis: Purple • Rims: Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Earth Shaker</div><div class="item-specs">Chassis: Khaki • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Megalodon</div><div class="item-specs">Chassis: Navy • Rims: Teal • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Jester</div><div class="item-specs">Chassis: Purple • Rims: Green • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">El Toro Loco (Yellow Chrome Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Yellow • Rims: Red • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 18 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 18</div>
+          <span class="chase-badge">✨ Chase: Gold Grave Digger</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Max-D (Fire Variant)</div><div class="item-specs">Chassis: Red • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Bakugan Dragonoid</div><div class="item-specs">Chassis: Red • Rims: Gold • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Pirate's Curse</div><div class="item-specs">Chassis: Navy • Rims: Gold • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Bounty Hunter</div><div class="item-specs">Chassis: Blue • Rims: Yellow • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Grave Digger (Gold Chrome Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Gold • Rims: Chrome Gold • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 17 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 17</div>
+          <span class="chase-badge">✨ Chase: Chrome Son-Uva Digger</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Monster Mutt Dalmatian</div><div class="item-specs">Chassis: White • Rims: Red • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Blue Thunder</div><div class="item-specs">Chassis: Blue • Rims: Silver • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Mohawk Warrior</div><div class="item-specs">Chassis: Black • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Alien Invasion</div><div class="item-specs">Chassis: Green • Rims: Lime • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Son-Uva Digger (Silver Chrome Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Blue • Rims: Chrome Silver • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 16 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 16</div>
+          <span class="chase-badge">✨ Chase: Chrome Bakugan Dragonoid</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Grave Digger</div><div class="item-specs">Chassis: Neon Green • Rims: Lime Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Zombie</div><div class="item-specs">Chassis: Purple • Rims: Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Earth Shaker</div><div class="item-specs">Chassis: Tan • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Kraken</div><div class="item-specs">Chassis: Green • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Bakugan Dragonoid (Chrome Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Red • Rims: Gold • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 15 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 15</div>
+          <span class="chase-badge">✨ Chase: Gold Megalodon</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Max-D (Yellow Edition)</div><div class="item-specs">Chassis: Silver • Rims: Yellow • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">El Toro Loco (Orange)</div><div class="item-specs">Chassis: Red • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Soldier Fortune</div><div class="item-specs">Chassis: Camo Green • Rims: Tan • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Avenger</div><div class="item-specs">Chassis: Black • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Megalodon (Gold Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Gold • Rims: Teal • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 14 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 14</div>
+          <span class="chase-badge">✨ Chase: Chrome Max-D</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Grave Digger (BKT Original)</div><div class="item-specs">Chassis: Green • Rims: Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Monster Mutt (Brown)</div><div class="item-specs">Chassis: Brown • Rims: Red • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Blue Thunder</div><div class="item-specs">Chassis: Blue • Rims: Silver • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Dragon</div><div class="item-specs">Chassis: Green • Rims: Gold • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Max-D (Silver Chrome Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Silver • Rims: Black • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 13 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 13</div>
+          <span class="chase-badge">✨ Chase: Bronze Grave Digger</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Son-Uva Digger</div><div class="item-specs">Chassis: Blue • Rims: Blue • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Zombie</div><div class="item-specs">Chassis: Purple • Rims: Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Pirate's Curse</div><div class="item-specs">Chassis: Navy • Rims: Gold • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Shocker</div><div class="item-specs">Chassis: Silver • Rims: Blue • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Grave Digger (Bronze Chase) <span>⭐</span></div><div class="item-specs">Chassis: Bronze Chrome • Rims: Green • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 12 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 12</div>
+          <span class="chase-badge">✨ Chase: Chrome El Toro Loco</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Megalodon</div><div class="item-specs">Chassis: Navy • Rims: Teal • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Earth Shaker</div><div class="item-specs">Chassis: Tan • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Monster Mutt Dalmatian</div><div class="item-specs">Chassis: White • Rims: Red • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Higher Education</div><div class="item-specs">Chassis: Yellow • Rims: Black • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">El Toro Loco (Black Chrome Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Black • Rims: Red • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 11 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 11</div>
+          <span class="chase-badge">✨ Chase: Gold Zombie</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Grave Digger (Fire Flames)</div><div class="item-specs">Chassis: Green • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Max-D</div><div class="item-specs">Chassis: Silver • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Bakugan Dragonoid</div><div class="item-specs">Chassis: Red • Rims: Gold • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Bounty Hunter</div><div class="item-specs">Chassis: Blue • Rims: Yellow • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Zombie (Gold Chase) <span>⭐</span></div><div class="item-specs">Chassis: Gold Chrome • Rims: Purple • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 10 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 10</div>
+          <span class="chase-badge">✨ Chase: Chrome Bakugan Dragonoid</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">El Toro Loco (Yellow)</div><div class="item-specs">Chassis: Red • Rims: Red • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Blue Thunder</div><div class="item-specs">Chassis: Blue • Rims: Silver • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Mohawk Warrior</div><div class="item-specs">Chassis: Black • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Alien Invasion</div><div class="item-specs">Chassis: Green • Rims: Lime • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Bakugan Dragonoid (Red Foil Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Red • Rims: Gold • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 9 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 9</div>
+          <span class="chase-badge">✨ Chase: Platinum Max-D</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Grave Digger (Silver 2020)</div><div class="item-specs">Chassis: Green • Rims: Silver • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Megalodon</div><div class="item-specs">Chassis: Navy • Rims: Teal • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Son-Uva Digger</div><div class="item-specs">Chassis: Blue • Rims: Blue • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Jester</div><div class="item-specs">Chassis: Purple • Rims: Green • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Max-D (Platinum Chase) <span>⭐</span></div><div class="item-specs">Chassis: Platinum Chrome • Rims: Black • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 8 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 8</div>
+          <span class="chase-badge">✨ Chase: Chrome Earth Shaker</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Zombie</div><div class="item-specs">Chassis: Purple • Rims: Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Monster Mutt Rottweiler</div><div class="item-specs">Chassis: Brown • Rims: Red • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Avenger</div><div class="item-specs">Chassis: Black • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Soldier Fortune</div><div class="item-specs">Chassis: Green • Rims: Tan • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Earth Shaker (Yellow Chrome Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Yellow • Rims: Black • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 7 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 7</div>
+          <span class="chase-badge">✨ Chase: Gold Grave Digger</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Max-D</div><div class="item-specs">Chassis: Silver • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">El Toro Loco (Orange)</div><div class="item-specs">Chassis: Red • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Monster Mutt Dalmatian</div><div class="item-specs">Chassis: White • Rims: Red • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Pirate's Curse</div><div class="item-specs">Chassis: Navy • Rims: Gold • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Grave Digger (Gold Chase) <span>⭐</span></div><div class="item-specs">Chassis: Gold Chrome • Rims: Green • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 6 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 6</div>
+          <span class="chase-badge">✨ Chase: Chrome Megalodon</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Grave Digger</div><div class="item-specs">Chassis: Green • Rims: Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Bakugan Dragonoid (First Ed)</div><div class="item-specs">Chassis: Red • Rims: Gold • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Earth Shaker</div><div class="item-specs">Chassis: Tan • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Blue Thunder</div><div class="item-specs">Chassis: Blue • Rims: Silver • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Megalodon (Chrome Blue Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Blue • Rims: Teal • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 5 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 5</div>
+          <span class="chase-badge">✨ Chase: Chrome El Toro Loco</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Son-Uva Digger</div><div class="item-specs">Chassis: Blue • Rims: Blue • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Zombie</div><div class="item-specs">Chassis: Purple • Rims: Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Monster Mutt (Brown)</div><div class="item-specs">Chassis: Brown • Rims: Red • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Alien Invasion</div><div class="item-specs">Chassis: Green • Rims: Lime • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">El Toro Loco (Chrome Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Orange • Rims: Black • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 4 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 4</div>
+          <span class="chase-badge">✨ Chase: Gold Max-D</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Grave Digger (Purple Paint)</div><div class="item-specs">Chassis: Green • Rims: Purple • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Megalodon</div><div class="item-specs">Chassis: Navy • Rims: Teal • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Mohawk Warrior</div><div class="item-specs">Chassis: Black • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Bounty Hunter</div><div class="item-specs">Chassis: Blue • Rims: Yellow • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Max-D (Gold Chase) <span>⭐</span></div><div class="item-specs">Chassis: Gold Chrome • Rims: Black • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 3 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 3</div>
+          <span class="chase-badge">✨ Chase: Chrome Pirate's Curse</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Earth Shaker</div><div class="item-specs">Chassis: Tan • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Monster Mutt Dalmatian</div><div class="item-specs">Chassis: White • Rims: Red • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">El Toro Loco (Black)</div><div class="item-specs">Chassis: Red • Rims: Yellow • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Soldier Fortune</div><div class="item-specs">Chassis: Camo Green • Rims: Tan • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Pirate's Curse (Chrome Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Blue • Rims: Gold • Chase Edition</div></div>
+        </div>
+      </section>
+
+      <!-- SERIES 2 -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 2</div>
+          <span class="chase-badge">✨ Chase: Chrome Grave Digger</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Max-D (Silver)</div><div class="item-specs">Chassis: Silver • Rims: Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Blue Thunder</div><div class="item-specs">Chassis: Blue • Rims: Silver • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Zombie</div><div class="item-specs">Chassis: Purple • Rims: Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Son-Uva Digger</div><div class="item-specs">Chassis: Blue • Rims: Blue • Scale: 1:64</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Grave Digger (Chrome Silver Chase) <span>⭐</span></div><div class="item-specs">Chassis: Chrome Silver • Rims: Green Chrome • Chase Edition</div></div>
+        </div>
+      </section>
+      
+      <!-- SERIES 1 (LEGACY LAUNCH) -->
+      <section class="series-block" data-category="1:64">
+        <div class="series-header">
+          <div class="series-title">1:64 Scale • Series 1 (Inaugural Line)</div>
+          <span class="chase-badge">Classic Release</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Grave Digger (BKT Original)</div><div class="item-specs">Chassis: Neon Green • Rims: Lime Green • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Max-D (Silver Body)</div><div class="item-specs">Chassis: Metallic Silver • Rims: Safety Orange • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Megalodon (Shark Teeth)</div><div class="item-specs">Chassis: Metallic Navy • Rims: Cyan Teal • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">El Toro Loco (Black Edition)</div><div class="item-specs">Chassis: Blood Red • Rims: Yellow/Gold • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Monster Mutt (Brown Dog)</div><div class="item-specs">Chassis: Chestnut Brown • Rims: Gloss Red • Scale: 1:64</div></div>
+          <div class="checklist-item"><div class="item-name">Zombie (Classic Flesh)</div><div class="item-specs">Chassis: Dark Violet • Rims: Lime Green • Scale: 1:64</div></div>
+        </div>
+      </section>
+
+
+      <!-- ================= MINIS / MICRO WAVES ================= -->
+
+      <!-- MINIS WAVE 12 -->
+      <section class="series-block" data-category="minis">
+        <div class="series-header">
+          <div class="series-title">Minis Blind Bags • Wave 12</div>
+          <span class="chase-badge">✨ Chase: Micro DIGatron Gold</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Mini Grave Digger</div><div class="item-specs">Micro Chassis: Green • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Megalodon</div><div class="item-specs">Micro Chassis: Navy Blue • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini ThunderROARus</div><div class="item-specs">Micro Chassis: Orange • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Earth Shaker</div><div class="item-specs">Micro Chassis: Desert Sand • Key Launcher Compatible</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Mini DIGatron (Gold Chase) <span>⭐</span></div><div class="item-specs">Micro Gold Plated • Ultra Rare Blind Bag Pull</div></div>
+        </div>
+      </section>
+
+      <!-- MINIS WAVE 11 -->
+      <section class="series-block" data-category="minis">
+        <div class="series-header">
+          <div class="series-title">Minis Blind Bags • Wave 11</div>
+          <span class="chase-badge">✨ Chase: Neon Dragonoid</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Mini Max-D</div><div class="item-specs">Micro Chassis: Silver Grey • Blind Bag Series</div></div>
+          <div class="checklist-item"><div class="item-name">Mini El Toro Loco (Yellow)</div><div class="item-specs">Micro Chassis: Red • Blind Bag Series</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Zombie</div><div class="item-specs">Micro Chassis: Purple • Blind Bag Series</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Son-Uva Digger</div><div class="item-specs">Micro Chassis: Blue • Blind Bag Series</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Mini Bakugan Dragonoid (Neon Chase) <span>⭐</span></div><div class="item-specs">Micro Translucent Flame • Rare Mystery Bag</div></div>
+        </div>
+      </section>
+
+      <!-- MINIS WAVE 10 -->
+      <section class="series-block" data-category="minis">
+        <div class="series-header">
+          <div class="series-title">Minis Blind Bags • Wave 10</div>
+          <span class="chase-badge">✨ Chase: Clear Ghost Pirate's Curse</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Mini Sparkle Smash</div><div class="item-specs">Micro Chassis: Violet • Pink Wheels</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Lucas Stabilizer</div><div class="item-specs">Micro Chassis: Red • White Wheels</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Blue Thunder</div><div class="item-specs">Micro Chassis: Blue • Silver Wheels</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Mini Pirate's Curse (Clear Chase) <span>⭐</span></div><div class="item-specs">Micro Glow Translucent Body • 1 in 24 Bag Pull</div></div>
+        </div>
+      </section>
+
+      <!-- MINIS WAVE 9 -->
+      <section class="series-block" data-category="minis">
+        <div class="series-header">
+          <div class="series-title">Minis Blind Bags • Wave 9</div>
+          <span class="chase-badge">✨ Chase: Chrome Alien Invasion</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Mini Grave Digger (Purple)</div><div class="item-specs">Micro Chassis: Green • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Megalodon</div><div class="item-specs">Micro Chassis: Navy Blue • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Earth Shaker</div><div class="item-specs">Micro Chassis: Desert Sand • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Monster Mutt Dalmatian</div><div class="item-specs">Micro Chassis: White • Key Launcher Compatible</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Mini Alien Invasion (Chrome Chase) <span>⭐</span></div><div class="item-specs">Micro Silver Chrome Pod • Rare Mystery Blind Bag</div></div>
+        </div>
+      </section>
+
+      <!-- MINIS WAVE 8 -->
+      <section class="series-block" data-category="minis">
+        <div class="series-header">
+          <div class="series-title">Minis Blind Bags • Wave 8</div>
+          <span class="chase-badge">✨ Chase: Gold Zombie</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Mini Max-D</div><div class="item-specs">Micro Chassis: Metallic Silver • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Son-Uva Digger</div><div class="item-specs">Micro Chassis: Royal Blue • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini El Toro Loco (Black)</div><div class="item-specs">Micro Chassis: Gloss Red • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Blue Thunder</div><div class="item-specs">Micro Chassis: Navy Blue • Key Launcher Compatible</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Mini Zombie (Gold Chase) <span>⭐</span></div><div class="item-specs">Micro Gold Plated Body • Rare Mystery Blind Bag</div></div>
+        </div>
+      </section>
+
+      <!-- MINIS WAVE 7 -->
+      <section class="series-block" data-category="minis">
+        <div class="series-header">
+          <div class="series-title">Minis Blind Bags • Wave 7</div>
+          <span class="chase-badge">✨ Chase: Chrome Bakugan Dragonoid</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Mini Grave Digger (Classic BKT)</div><div class="item-specs">Micro Chassis: Neon Green • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Mohawk Warrior</div><div class="item-specs">Micro Chassis: Gloss Black • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Soldier Fortune</div><div class="item-specs">Micro Chassis: Camo Green • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Avenger</div><div class="item-specs">Micro Chassis: Satin Black • Key Launcher Compatible</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Mini Bakugan Dragonoid (Chrome Chase) <span>⭐</span></div><div class="item-specs">Micro Chrome Red Wing Details • Rare Mystery Bag</div></div>
+        </div>
+      </section>
+
+      <!-- MINIS WAVE 6 -->
+      <section class="series-block" data-category="minis">
+        <div class="series-header">
+          <div class="series-title">Minis Blind Bags • Wave 6</div>
+          <span class="chase-badge">✨ Chase: Gold El Toro Loco</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Mini Megalodon</div><div class="item-specs">Micro Chassis: Deep Blue • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Earth Shaker</div><div class="item-specs">Micro Chassis: Khaki Tan • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Zombie</div><div class="item-specs">Micro Chassis: Violet Purple • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Monster Mutt Rottweiler</div><div class="item-specs">Micro Chassis: Dark Brown • Key Launcher Compatible</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Mini El Toro Loco (Gold Chase) <span>⭐</span></div><div class="item-specs">Micro Full Chrome Gold Body • Rare Mystery Bag</div></div>
+        </div>
+      </section>
+
+      <!-- MINIS WAVE 5 -->
+      <section class="series-block" data-category="minis">
+        <div class="series-header">
+          <div class="series-title">Minis Blind Bags • Wave 5</div>
+          <span class="chase-badge">✨ Chase: Clear Ice Megalodon</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Mini Max-D</div><div class="item-specs">Micro Chassis: Silver • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Pirate's Curse</div><div class="item-specs">Micro Chassis: Navy Blue • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Son-Uva Digger</div><div class="item-specs">Micro Chassis: Bright Blue • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Dragon</div><div class="item-specs">Micro Chassis: Dark Green • Key Launcher Compatible</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Mini Megalodon (Translucent Ice Chase) <span>⭐</span></div><div class="item-specs">Micro Clear Ghost Body • Rare Mystery Bag</div></div>
+        </div>
+      </section>
+
+      <!-- MINIS WAVE 4 -->
+      <section class="series-block" data-category="minis">
+        <div class="series-header">
+          <div class="series-title">Minis Blind Bags • Wave 4</div>
+          <span class="chase-badge">✨ Chase: Gold Max-D</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Mini Grave Digger (Silver Trim)</div><div class="item-specs">Micro Chassis: Lime Green • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini El Toro Loco (Orange)</div><div class="item-specs">Micro Chassis: Blood Red • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Blue Thunder</div><div class="item-specs">Micro Chassis: Silver Chrome • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Bounty Hunter</div><div class="item-specs">Micro Chassis: Blue • Key Launcher Compatible</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Mini Max-D (Gold Chase) <span>⭐</span></div><div class="item-specs">Micro Full Gold Plating • Rare Mystery Bag</div></div>
+        </div>
+      </section>
+
+      <!-- MINIS WAVE 3 -->
+      <section class="series-block" data-category="minis">
+        <div class="series-header">
+          <div class="series-title">Minis Blind Bags • Wave 3</div>
+          <span class="chase-badge">✨ Chase: Glow Zombie</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Mini Megalodon</div><div class="item-specs">Micro Chassis: Navy • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Earth Shaker</div><div class="item-specs">Micro Chassis: Sand Brown • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Monster Mutt Dalmatian</div><div class="item-specs">Micro Chassis: White • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Alien Invasion</div><div class="item-specs">Micro Chassis: Toxic Green • Key Launcher Compatible</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Mini Zombie (Glow-in-the-Dark Chase) <span>⭐</span></div><div class="item-specs">Micro Luminescent Plastic • Rare Mystery Bag</div></div>
+        </div>
+      </section>
+
+      <!-- MINIS WAVE 2 -->
+      <section class="series-block" data-category="minis">
+        <div class="series-header">
+          <div class="series-title">Minis Blind Bags • Wave 2</div>
+          <span class="chase-badge">✨ Chase: Chrome Grave Digger</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Mini Grave Digger (Purple Edition)</div><div class="item-specs">Micro Chassis: Neon Green • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Max-D (Fire Variant)</div><div class="item-specs">Micro Chassis: Gloss Red • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Son-Uva Digger</div><div class="item-specs">Micro Chassis: Royal Blue • Key Launcher Compatible</div></div>
+          <div class="checklist-item"><div class="item-name">Mini El Toro Loco (Yellow)</div><div class="item-specs">Micro Chassis: Blood Red • Key Launcher Compatible</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Mini Grave Digger (Silver Chrome Chase) <span>⭐</span></div><div class="item-specs">Micro Polished Chrome Body • Rare Mystery Bag</div></div>
+        </div>
+      </section>
+      
+      <!-- MINIS WAVE 1 -->
+      <section class="series-block" data-category="minis">
+        <div class="series-header">
+          <div class="series-title">Minis Blind Bags • Wave 1 (Debut)</div>
+          <span class="chase-badge">Classic Series</span>
+        </div>
+        <div class="truck-checklist">
+          <div class="checklist-item"><div class="item-name">Mini Grave Digger #1</div><div class="item-specs">Micro Chassis: Green • Key Slot Rear</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Max-D</div><div class="item-specs">Micro Chassis: Black • Key Slot Rear</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Megalodon</div><div class="item-specs">Micro Chassis: Navy • Key Slot Rear</div></div>
+          <div class="checklist-item"><div class="item-name">Mini Monster Mutt</div><div class="item-specs">Micro Chassis: Brown • Key Slot Rear</div></div>
+          <div class="checklist-item"><div class="item-name">Mini El Toro Loco</div><div class="item-specs">Micro Chassis: Red • Key Slot Rear</div></div>
+          <div class="checklist-item is-chase"><div class="item-name">Mini Gold Grave Digger <span>⭐</span></div><div class="item-specs">Micro Full Chrome Gold Body • Series 1 Chase</div></div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- CALL TO ACTION LINK TO ORGANIZER -->
+    <div class="cta-box">
+      <h3>Ready to Track Your Fleet?</h3>
+      <p>Log chassis colors, rim editions, and custom builds in your personal collection tracker.</p>
+      <a href="index.html" class="btn-return" style="padding: 10px 22px; font-size: 0.9rem;">Open JAM Vault Garage</a>
+    </div>
+  </main>
+
+  <footer>
+    <div>JAM Vault • Monster Truck Die-Cast Database & Collector Tracker</div>
+    <div style="margin-top: 8px; display: flex; justify-content: center; gap: 16px;">
+      <a href="index.html">Garage</a>
+      <a href="about.html">About</a>
+      <a href="privacy.html">Privacy Policy</a>
+      <a href="terms.html">Terms of Service</a>
+    </div>
+  </footer>
+
+  <script>
+    let activeCategory = 'all';
+
+    function setCategoryFilter(cat) {
+      activeCategory = cat;
+      ['btn-cat-all', 'btn-cat-mainline', 'btn-cat-minis', 'btn-cat-chase'].forEach(id => {
+        document.getElementById(id).classList.remove('active');
+      });
+
+      if (cat === 'all') document.getElementById('btn-cat-all').classList.add('active');
+      if (cat === '1:64') document.getElementById('btn-cat-mainline').classList.add('active');
+      if (cat === 'minis') document.getElementById('btn-cat-minis').classList.add('active');
+      if (cat === 'chase') document.getElementById('btn-cat-chase').classList.add('active');
+
+      filterChecklist();
+    }
+
+    function filterChecklist() {
+      const q = (document.getElementById('checklist-search').value || '').toLowerCase();
+      const blocks = document.querySelectorAll('.series-block');
+
+      blocks.forEach(block => {
+        const cat = block.getAttribute('data-category');
+        const items = block.querySelectorAll('.checklist-item');
+        let blockMatches = false;
+
+        items.forEach(item => {
+          const text = item.innerText.toLowerCase();
+          const isChase = item.classList.contains('is-chase');
+          
+          let matchesCat = true;
+          if (activeCategory === '1:64' && cat !== '1:64') matchesCat = false;
+          if (activeCategory === 'minis' && cat !== 'minis') matchesCat = false;
+          if (activeCategory === 'chase' && !isChase) matchesCat = false;
+
+          const matchesSearch = text.includes(q);
+
+          if (matchesCat && matchesSearch) {
+            item.style.display = 'flex';
+            blockMatches = true;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        block.style.display = blockMatches ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
